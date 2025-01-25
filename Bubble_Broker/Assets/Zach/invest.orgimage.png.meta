@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      invest.orgimage_0: 3864174323724327162
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

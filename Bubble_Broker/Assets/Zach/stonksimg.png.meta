@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      stonksimg_0: -8213516322825109027
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

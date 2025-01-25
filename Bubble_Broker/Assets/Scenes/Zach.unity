@@ -4364,6 +4364,7 @@ MonoBehaviour:
   quarterText: {fileID: 973058349}
   riskText: {fileID: 633890201}
   moneyText: {fileID: 899127460}
+  blueScreenPanel: {fileID: 1809672531}
 --- !u!1 &1272481350
 GameObject:
   m_ObjectHideFlags: 0
@@ -4815,6 +4816,7 @@ GameObject:
   - component: {fileID: 1310210604}
   - component: {fileID: 1310210603}
   - component: {fileID: 1310210602}
+  - component: {fileID: 1310210605}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -4885,7 +4887,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1310210603}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1310210605}
+        m_TargetAssemblyTypeName: ShutDownButton, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1310210603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4924,6 +4938,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310210600}
   m_CullTransparentMesh: 1
+--- !u!114 &1310210605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310210600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a7df375f57fe7b43bbfec5a1da8254d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Zach
 --- !u!1 &1343329643
 GameObject:
   m_ObjectHideFlags: 0
@@ -5742,7 +5769,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1623012407
 RectTransform:
   m_ObjectHideFlags: 0
