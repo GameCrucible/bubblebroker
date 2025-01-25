@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8c41567455cc404c8f1e3368a6da8fa, type: 3}
-  m_Name: Char 10
+  m_Name: Gertrude Fromage
   m_EditorClassIdentifier: 
   topic:
-  - {fileID: 11400000, guid: 06e4835918134d646bff0c3e85fbfb8b, type: 2}
-  - {fileID: 11400000, guid: b6581f4733e991c43820bc04b1529257, type: 2}
-  - {fileID: 11400000, guid: 556aee036004cab458959987af9fac56, type: 2}
-  image: {fileID: -7644374185654875420, guid: ac2f24ba752244b4289908137dd98b47, type: 3}
-  firmMultiplier: 0
-  lieMultiplier: 1
-  romanceMultiplier: 100
+  - {fileID: 11400000, guid: 40198a4aa7faaec4990aa692b4d43423, type: 2}
+  - {fileID: 11400000, guid: 44f9ab99f2a4b28498652566a23b140c, type: 2}
+  - {fileID: 11400000, guid: c93aa3176de66ab4da8960a507a9f3f5, type: 2}
+  image: {fileID: -3802496618059931693, guid: fd738683d1f4d1241badde23a9f5b529, type: 3}
+  firmMultiplier: 1
+  lieMultiplier: 100
+  romanceMultiplier: 0
   romance: 0
