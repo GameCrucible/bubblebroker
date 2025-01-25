@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -21,6 +22,8 @@ public class GameManager : MonoBehaviour
     
     [Tooltip("Starting money for the player.")]
     public int initialMoney = 10000;
+    
+    public List<Investor> investors = new List<Investor>();
 
     //Ensure only one instance of the GameManager exists
     private void Awake()
