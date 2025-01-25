@@ -13,6 +13,8 @@ public class ProgressBar : MonoBehaviour
 
     private Image progressImage;
     private int currentIndex = 0;
+    
+    public BubblesManager bubblesManager;
 
     void Start()
     {
@@ -55,6 +57,8 @@ public class ProgressBar : MonoBehaviour
             yield return new WaitForSecondsRealtime(lastFrameDelay);
             progressImage.sprite = progressFrames[currentIndex+1];
             yield return new WaitForSeconds(0.2f);
+            
+            bubblesManager.ShowInitialMessage();
             
             //Hide panel
             panel.SetActive(false);

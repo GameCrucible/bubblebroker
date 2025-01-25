@@ -108,4 +108,27 @@ public class BubblesManager : MonoBehaviour
         bubbles.sprite = bubbleIdle;
         isTyping = false;
     }
+    
+    public void ShowInitialMessage()
+    {
+        //Randomize sound pitch
+        clickSound.pitch = Random.Range(0.9f, 1.1f);
+        
+        clickSound.Play();
+        
+        //Set message
+        string message = "Hey! I'm Bubbles! Your friendly AI assistant. Keep me entertained or else...";
+        
+        // Cancel existing coroutines
+        if (currentRoutine != null)
+        {
+            StopCoroutine(currentRoutine);
+        }
+        
+        // Reset timer
+        hideTimer = Time.time + displayTime;
+        
+        // Start new routine
+        currentRoutine = StartCoroutine(TypeText(message));
+    }
 }

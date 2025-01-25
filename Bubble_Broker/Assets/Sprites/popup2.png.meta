@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 18c0dfdd76a80864da6a6acf7a397b61
+guid: 04a93cdbbf95c2a4ead8f047bf7bfc09
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8711821075391352940
-    second: bubblesTalk_0
-  - first:
-      213: -8139147521164169494
-    second: bubblesTalk_1
+      213: 7965609295299128680
+    second: popup2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bubblesTalk_0
+      name: popup2_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 53
-        width: 363
-        height: 330
+        x: 0
+        y: 0
+        width: 2480
+        height: 1995
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49f698e93e4691780800000000000000
-      internalID: -8711821075391352940
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bubblesTalk_1
-      rect:
-        serializedVersion: 2
-        x: 423
-        y: 213
-        width: 7
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: aee228ad370fb0f80800000000000000
-      internalID: -8139147521164169494
+      spriteID: 86daad153778b8e60800000000000000
+      internalID: 7965609295299128680
       vertices: []
       indices: 
       edges: []
@@ -159,9 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      bubblesTalk_0: -8711821075391352940
-      bubblesTalk_1: -8139147521164169494
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
