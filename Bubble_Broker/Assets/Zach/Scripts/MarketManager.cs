@@ -30,8 +30,8 @@ public class MarketManager : MonoBehaviour
             riskText.text = "Market Instability: " + GameManager.instance.risk + "%";
             moneyText.text = "Portfolio Value: " + GameManager.instance.money.ToString("C0");
             
-            // 1/100 chance of blue screen
-            if (Random.Range(0, 100) == 0)
+            // 1/150 chance of blue screen
+            if (Random.Range(0, 150) == 0)
             {
                 blueScreenPanel.transform.SetAsLastSibling();
                 blueScreenPanel.SetActive(true);
