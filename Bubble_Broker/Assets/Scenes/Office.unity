@@ -815,6 +815,14 @@ MonoBehaviour:
   investors:
   - {fileID: 11400000, guid: 8a85288e08cac464398486382b920c44, type: 2}
   - {fileID: 11400000, guid: cb707b29d11bf0a4e97387f763fac49c, type: 2}
+  - {fileID: 11400000, guid: 48a4ea2c88c1e0e47ae7deb8cb21d7ab, type: 2}
+  - {fileID: 11400000, guid: 104977f3a07357545bceed18e2c25f53, type: 2}
+  - {fileID: 11400000, guid: 0134ee9be15d8134cafca3f1a782c2cd, type: 2}
+  - {fileID: 11400000, guid: eac42936ab36222429b06e14d62a7be9, type: 2}
+  - {fileID: 11400000, guid: 6c9aa2e145cc0bc41b4e009ad4c8f552, type: 2}
+  - {fileID: 11400000, guid: 537628d224e13d24aa1e9de3f3318ae7, type: 2}
+  - {fileID: 11400000, guid: 901faa758dd331546ac8760f455163f7, type: 2}
+  - {fileID: 11400000, guid: 83c905d05c062d04c85752bc76dc9636, type: 2}
 --- !u!1 &1880494812
 GameObject:
   m_ObjectHideFlags: 0
