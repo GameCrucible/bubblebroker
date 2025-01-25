@@ -422,7 +422,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      boing martin_0: 4970018420863269035
+      boing martin_1: -475813422389909064
+      boing martin_10: -6142070024479995178
+      boing martin_11: 1242139294591640784
+      boing martin_2: -5916880876440354374
+      boing martin_3: -5256639868765370434
+      boing martin_4: -3108633892085609841
+      boing martin_5: -6655263808043177416
+      boing martin_6: -1947261858331930701
+      boing martin_7: -2726588648359197194
+      boing martin_8: 2210169052346454435
+      boing martin_9: 1376451979298782967
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

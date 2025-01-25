@@ -297,7 +297,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      rtxdia_0: -7064439099673746302
+      rtxdia_1: -8785609497168029429
+      rtxdia_2: -3615847655667717361
+      rtxdia_3: 8371724744024104754
+      rtxdia_4: 428638020593610839
+      rtxdia_5: 1662885279126973839
+      rtxdia_6: 429947835397319039
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -12,103 +12,156 @@ public class InvestorManager : MonoBehaviour
     public TextMeshProUGUI investorLikes;
     public TextMeshProUGUI investorDislikes;
     public TextMeshProUGUI investorRomance;
-    public TextMeshProUGUI pageText;
     
+    public Image investorImage2;
+    public TextMeshProUGUI investorName2;
+    public TextMeshProUGUI investorLikes2;
+    public TextMeshProUGUI investorDislikes2;
+    public TextMeshProUGUI investorRomance2;
+    
+    public Image investorImage3;
+    public TextMeshProUGUI investorName3;
+    public TextMeshProUGUI investorLikes3;
+    public TextMeshProUGUI investorDislikes3;
+    public TextMeshProUGUI investorRomance3;
+    
+    public TextMeshProUGUI pageText;
     public Button nextButton;
     public Button previousButton;
 
-    private int currentIndex = 0;
+    private int currentPageIndex = 0;
+    private int investorsPerPage = 3;
 
     private void Start()
     {
-        // Initial check for investors
-        if (GameManager.instance.investors.Count > 0)
-        {
-            LoadInvestor(GameManager.instance.investors[currentIndex]);
-            UpdateNavigationButtons();
-            UpdatePageText();
-        }
-        else
-        {
-            Debug.LogWarning("No investors found in GameManager");
-        }
-
-        // Add button listeners
-        nextButton.onClick.AddListener(NextInvestor);
-        previousButton.onClick.AddListener(PreviousInvestor);
+        InitializeUI();
+        nextButton.onClick.AddListener(NextPage);
+        previousButton.onClick.AddListener(PreviousPage);
     }
 
-    public void LoadInvestor(Investor investor)
+    private void InitializeUI()
     {
-        investorImage.sprite = investor.image;
-        investorName.text = investor.name;
+        if (GameManager.instance.investors.Count == 0)
+        {
+            Debug.LogWarning("No investors found in GameManager");
+            DisableAllUIElements();
+            return;
+        }
+
+        LoadPage(currentPageIndex);
+        UpdateNavigation();
+        UpdatePageCounter();
+    }
+
+    private void LoadPage(int pageIndex)
+    {
+        int startIndex = pageIndex * investorsPerPage;
+        
+        // Load first investor
+        SetInvestorUI(startIndex, investorImage, investorName, investorLikes, investorDislikes, investorRomance);
+        
+        // Load second investor
+        SetInvestorUI(startIndex + 1, investorImage2, investorName2, investorLikes2, investorDislikes2, investorRomance2);
+        
+        // Load third investor
+        SetInvestorUI(startIndex + 2, investorImage3, investorName3, investorLikes3, investorDislikes3, investorRomance3);
+    }
+
+    private void SetInvestorUI(int index, Image image, TextMeshProUGUI nameText, 
+                             TextMeshProUGUI likes, TextMeshProUGUI dislikes, TextMeshProUGUI romance)
+    {
+        bool isValidIndex = index < GameManager.instance.investors.Count;
+        
+        image.gameObject.SetActive(isValidIndex);
+        nameText.gameObject.SetActive(isValidIndex);
+        likes.gameObject.SetActive(isValidIndex);
+        dislikes.gameObject.SetActive(isValidIndex);
+        romance.gameObject.SetActive(isValidIndex);
+
+        if (!isValidIndex) return;
+
+        Investor investor = GameManager.instance.investors[index];
+        image.sprite = investor.image;
+        nameText.text = investor.name;
 
         // Build likes string
         string topics = "I like to invest in ";
-        foreach (var topic in investor.topic)
-        {
-            topics += topic.name + ", ";
-        }
         if (investor.topic.Length > 0)
         {
+            foreach (var topic in investor.topic)
+            {
+                topics += topic.name + ", ";
+            }
             topics = topics.TrimEnd(',', ' ') + " companies";
         }
-        investorLikes.text = topics;
+        likes.text = topics;
 
         // Handle dislikes
-        if (investor.firmMultiplier <= 0)
-        {
-            investorDislikes.text = "I don't like it when companies are too firm";
-        }
-        else if (investor.romanceMultiplier <= 0)
-        {
-            investorDislikes.text = "I don't like it when people are flirty";
-        }
-        else
-        {
-            investorDislikes.text = "I don't like it when companies are dishonest";
-        }
+        dislikes.text = GetDislikeText(investor);
+        romance.text = $"Romance: {investor.romance * 100}%";
+    }
+
+    private string GetDislikeText(Investor investor)
+    {
+        if (investor.firmMultiplier <= 0) return "I don't like it when companies are too firm";
+        if (investor.romanceMultiplier <= 0) return "I don't like it when people are flirty";
+        return "I don't like it when companies are dishonest";
+    }
+
+    private void NextPage()
+    {
+        currentPageIndex++;
+        LoadPage(currentPageIndex);
+        UpdateNavigation();
+        UpdatePageCounter();
+    }
+
+    private void PreviousPage()
+    {
+        currentPageIndex--;
+        LoadPage(currentPageIndex);
+        UpdateNavigation();
+        UpdatePageCounter();
+    }
+
+    private void UpdateNavigation()
+    {
+        previousButton.interactable = currentPageIndex > 0;
+        nextButton.interactable = (currentPageIndex + 1) * investorsPerPage < GameManager.instance.investors.Count;
+    }
+
+    private void UpdatePageCounter()
+    {
+        int totalPages = Mathf.CeilToInt((float)GameManager.instance.investors.Count / investorsPerPage);
+        pageText.text = $"{currentPageIndex + 1}/{totalPages}";
+    }
+
+    private void DisableAllUIElements()
+    {
+        investorImage.gameObject.SetActive(false);
+        investorImage2.gameObject.SetActive(false);
+        investorImage3.gameObject.SetActive(false);
         
-        investorRomance.text = $"Romance: {investor.romance * 100}%";
-    }
-
-    private void NextInvestor()
-    {
-        if (currentIndex < GameManager.instance.investors.Count - 1)
-        {
-            currentIndex++;
-            LoadInvestor(GameManager.instance.investors[currentIndex]);
-            UpdateNavigationButtons();
-            UpdatePageText();
-        }
-    }
-
-    private void PreviousInvestor()
-    {
-        if (currentIndex > 0)
-        {
-            currentIndex--;
-            LoadInvestor(GameManager.instance.investors[currentIndex]);
-            UpdateNavigationButtons();
-            UpdatePageText();
-        }
-    }
-
-    private void UpdateNavigationButtons()
-    {
-        previousButton.interactable = currentIndex > 0;
-        nextButton.interactable = currentIndex < GameManager.instance.investors.Count - 1;
-    }
-
-    private void UpdatePageText()
-    {
-        pageText.text = $"{currentIndex + 1}/{GameManager.instance.investors.Count}";
+        // Disable all text elements
+        investorName.gameObject.SetActive(false);
+        investorLikes.gameObject.SetActive(false);
+        investorDislikes.gameObject.SetActive(false);
+        investorRomance.gameObject.SetActive(false);
+        
+        investorName2.gameObject.SetActive(false);
+        investorLikes2.gameObject.SetActive(false);
+        investorDislikes2.gameObject.SetActive(false);
+        investorRomance2.gameObject.SetActive(false);
+        
+        investorName3.gameObject.SetActive(false);
+        investorLikes3.gameObject.SetActive(false);
+        investorDislikes3.gameObject.SetActive(false);
+        investorRomance3.gameObject.SetActive(false);
     }
 
     private void OnDestroy()
     {
-        // Clean up button listeners
-        nextButton.onClick.RemoveListener(NextInvestor);
-        previousButton.onClick.RemoveListener(PreviousInvestor);
+        nextButton.onClick.RemoveAllListeners();
+        previousButton.onClick.RemoveAllListeners();
     }
 }
