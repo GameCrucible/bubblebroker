@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Rude Gas
   m_EditorClassIdentifier: 
   topicValue: 30000
-  romanceResponse: q
-  lieResponse: w
-  firmResponse: e
+  romanceResponse: The only gas I know is gassing you up baby, leave the money to
+    me.
+  lieResponse: Electric cars aren't real man, invest in Rude Gas!
+  firmResponse: People are going to need gas, why not invest before it's gone?

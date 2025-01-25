@@ -20,7 +20,7 @@ public class Dialogue : MonoBehaviour
     public Image dialogueImage;
 
     private IEnumerator typingCoroutine;
-    private float typewriterPerChar = 0.05f;
+    //private float typewriterPerChar = 0.05f;
     private string typingText;
 
     public TMP_Text firmText;
@@ -137,7 +137,7 @@ public class Dialogue : MonoBehaviour
         foreach(char letter in typingText)
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(typewriterPerChar);
+            yield return new WaitForSeconds(currentInvestor.talkSpeed);
         }
         SetPlayerResponses();
         StopCoroutine(typingCoroutine);

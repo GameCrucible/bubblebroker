@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Gallium
   m_EditorClassIdentifier: 
   topicValue: 25000
-  romanceResponse: q
-  lieResponse: w
-  firmResponse: e
+  romanceResponse: GalliumFLirt
+  lieResponse: Oh yea, Gallium is SO solid.
+  firmResponse: Yeah gallium will work pretty solid. Just watch out for its impulse
+    to soften out.

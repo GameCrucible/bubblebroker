@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Gojo_0: -2030773411343618624
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
