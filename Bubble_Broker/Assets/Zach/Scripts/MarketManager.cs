@@ -12,6 +12,8 @@ public class MarketManager : MonoBehaviour
     public TextMeshProUGUI riskText;
     public TextMeshProUGUI moneyText;
 
+    public GameObject blueScreenPanel;
+
     public void Start()
     {
         StartCoroutine(UpdateDay());
@@ -27,6 +29,13 @@ public class MarketManager : MonoBehaviour
             quarterText.text = "Quarter: " + GameManager.instance.currentQuarter;
             riskText.text = "Market Instability: " + GameManager.instance.risk + "%";
             moneyText.text = "Portfolio Value: " + GameManager.instance.money.ToString("C0");
+            
+            // 1/150 chance of blue screen
+            if (Random.Range(0, 150) == 0)
+            {
+                blueScreenPanel.transform.SetAsLastSibling();
+                blueScreenPanel.SetActive(true);
+            }
         }
     }
 }

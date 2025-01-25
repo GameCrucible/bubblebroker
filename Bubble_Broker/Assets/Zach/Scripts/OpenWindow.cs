@@ -7,10 +7,14 @@ public class OpenWindow : MonoBehaviour
     [Tooltip("Maximum clicks before guaranteed open")]
     public int maxClickCount = 10;
     
+    public AudioSource clickSound;
+    
     private int currentClickCount;
 
     public void OnClick()
     {
+        clickSound.Play();
+        
         currentClickCount++;
         
         // Check if we should open (1/3 chance or max clicks reached)
