@@ -1877,6 +1877,7 @@ MonoBehaviour:
   firmText: {fileID: 1107303206}
   lieText: {fileID: 877476019}
   romanceText: {fileID: 844573817}
+  callerAudio: {fileID: 0}
 --- !u!114 &1983093642
 MonoBehaviour:
   m_ObjectHideFlags: 0
