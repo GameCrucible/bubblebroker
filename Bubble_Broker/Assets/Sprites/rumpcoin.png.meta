@@ -347,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      rumpcoin_0: 9114738689594617341
+      rumpcoin_1: -4544903148373813738
+      rumpcoin_2: -4399819965995970957
+      rumpcoin_3: -5100257313102886997
+      rumpcoin_4: 6417356416396969529
+      rumpcoin_5: 3693217573850082268
+      rumpcoin_6: -621305155538093704
+      rumpcoin_7: -1741328167783312253
+      rumpcoin_8: -6194495460308913205
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

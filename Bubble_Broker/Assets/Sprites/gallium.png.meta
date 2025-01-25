@@ -297,7 +297,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gallium_0: -8446700777922468836
+      gallium_1: -2431084908770638071
+      gallium_2: 3684545680652745783
+      gallium_3: -6312953635114927523
+      gallium_4: -5522676718088669088
+      gallium_5: -5351705346618470378
+      gallium_6: 3033235374650510461
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

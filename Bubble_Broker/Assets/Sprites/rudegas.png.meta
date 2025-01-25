@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      rudegas_0: -6763558886999664597
+      rudegas_1: -4897973764644016310
+      rudegas_2: 6826438899176504508
+      rudegas_3: 8585006287701384762
+      rudegas_4: -1086950943240881513
+      rudegas_5: -1922310191283046106
+      rudegas_6: 5721016929380787911
+      rudegas_7: 8655821023384097559
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -272,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      congo_0: 3125027002094722619
+      congo_1: 3072017696811567224
+      congo_2: 6462347317285202929
+      congo_3: 7406193354274937197
+      congo_4: 1281799086545755008
+      congo_5: -535799360433135855
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
