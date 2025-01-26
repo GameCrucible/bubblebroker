@@ -8,7 +8,8 @@ public class CloseWindow : MonoBehaviour
     
     public void OnClick()
     {
-        clickSound.Play();
+        if(clickSound != null)
+            clickSound.Play();
         panel.SetActive(false);
     }
 }

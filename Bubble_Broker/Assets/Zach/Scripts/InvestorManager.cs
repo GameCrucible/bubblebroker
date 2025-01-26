@@ -103,9 +103,17 @@ public class InvestorManager : MonoBehaviour
 
     private string GetDislikeText(Investor investor)
     {
-        if (investor.firmMultiplier <= 0) return "I don't like it when companies are too firm";
-        if (investor.romanceMultiplier <= 0) return "I don't like it when people are flirty";
-        return "I don't like it when companies are dishonest";
+        switch (investor.dislike)
+        {
+            case Investor.Choices.Firm:
+                return "I don't like it when companies are too firm";
+            case Investor.Choices.Lie:
+                return "I don't like it when companies are dishonest";
+            case Investor.Choices.Romance:
+                return "I don't like it when people are flirty";
+        }
+        
+        return "I don't have any dislikes";
     }
 
     private void NextPage()

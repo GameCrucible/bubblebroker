@@ -52,6 +52,14 @@ public class GameManager : MonoBehaviour
     public Sprite q3Texture;
     public Sprite q4Texture;
 
+    [Header("Boss Notes")] 
+    public GameObject d1Report;
+    public GameObject q1Report;
+    public GameObject q2Report;
+    public GameObject q3Report;
+    public GameObject q4Report;
+    
+
     //Ensure only one instance of the GameManager exists
     private void Awake()
     {
@@ -81,6 +89,10 @@ public class GameManager : MonoBehaviour
         StartCoroutine(UpdateDay());
         
         ResetInvestors();
+        
+        RandomizeInvestorStats();
+        
+        StartCoroutine(displayNotes());
     }
 
     // Update is called once per frame
@@ -141,8 +153,6 @@ public class GameManager : MonoBehaviour
         GameOver();
     }
 
-
-
     private void ResetInvestors()
     {
         foreach (var investor in investors)
@@ -161,5 +171,53 @@ public class GameManager : MonoBehaviour
         computer.SetActive(false);
         mainCanvas.SetActive(false);
         gameMechanics.SetActive(false);
+    }
+
+    private void RandomizeInvestorStats()
+    {
+        foreach (var investor in investors)
+        {
+            if (investor.name == "Scammer" || investor.name == "Milton Stonefella")
+                return;
+            
+            investor.dislike = (Investor.Choices) Random.Range(0, 3);
+        }
+    }
+
+    private IEnumerator displayNotes()
+    {
+        yield return new WaitForSeconds(3f);
+        d1Report.SetActive(true);
+        
+        //Wait until d1 report is closed
+        yield return new WaitUntil(() => !d1Report.activeSelf);
+
+        yield return new WaitForSeconds(5f);
+        
+        q1Report.SetActive(true);
+        
+        //Wait until q1 report is closed
+        yield return new WaitUntil(() => !q1Report.activeSelf);
+        
+        //Wait until quarter 2
+        yield return new WaitUntil(() => currentQuarter >= 2);
+        
+        q2Report.SetActive(true);
+        
+        //Wait until q2 report is closed
+        yield return new WaitUntil(() => !q2Report.activeSelf);
+        
+        //Wait until quarter 3
+        yield return new WaitUntil(() => currentQuarter >= 3);
+        
+        q3Report.SetActive(true);
+        
+        //Wait until q3 report is closed
+        yield return new WaitUntil(() => !q3Report.activeSelf);
+        
+        //Wait until quarter 4
+        yield return new WaitUntil(() => currentQuarter >= 4);
+        
+        q4Report.SetActive(true);
     }
 }

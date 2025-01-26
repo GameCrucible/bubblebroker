@@ -28,7 +28,7 @@ public class BubblesManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(AddSystemInfoMessage());
+        //StartCoroutine(AddSystemInfoMessage());
         textBox.gameObject.SetActive(false);
         bubbles.sprite = bubbleIdle;
     }
@@ -133,66 +133,64 @@ public class BubblesManager : MonoBehaviour
         currentRoutine = StartCoroutine(TypeText(message));
     }
     
-    private IEnumerator AddSystemInfoMessage()
-    {
-        List<string> infoPieces = new List<string>();
-        string ipAddress = "";
-        string location = "";
-
-        // Try to get IP address (won't work in WebGL)
-        try
-        {
-            ipAddress = GetLocalIPAddress();
-            if (!string.IsNullOrEmpty(ipAddress))
-            {
-                infoPieces.Add($"IP: {ipAddress}");
-            }
-        }
-        catch
-        {
-            // IP collection failed
-        }
-
-        // Try to get location (requires user permission)
-        if (Input.location.isEnabledByUser)
-        {
-            Input.location.Start();
-            int maxWait = 10;
-            while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
-            {
-                yield return new WaitForSeconds(1);
-                maxWait--;
-            }
-
-            if (Input.location.status == LocationServiceStatus.Running)
-            {
-                LocationInfo loc = Input.location.lastData;
-                location = $"{loc.latitude:F2}, {loc.longitude:F2}";
-                infoPieces.Add($"Location: {location}");
-            }
-            Input.location.Stop();
-        }
-
-        // Add message if we collected any info
-        /**
-        if (infoPieces.Count > 0)
-        {
-            string infoMessage = "What's This?: " + string.Join(" • ", infoPieces);
-            bubbleTexts.Add(infoMessage);
-        }
-        */
-    }
-
-    private string GetLocalIPAddress()
-    {
-        var host = System.Net.Dns.GetHostEntry(System.Net.Dns.GetHostName());
-        foreach (var ip in host.AddressList)
-        {
-            if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
-            {
-                return ip.ToString();
-            }
-        }
-        return "";
-    }
+    // private IEnumerator AddSystemInfoMessage()
+    // {
+    //     List<string> infoPieces = new List<string>();
+    //     string ipAddress = "";
+    //     string location = "";
+    //
+    //     // Try to get IP address (won't work in WebGL)
+    //     try
+    //     {
+    //         ipAddress = GetLocalIPAddress();
+    //         if (!string.IsNullOrEmpty(ipAddress))
+    //         {
+    //             infoPieces.Add($"IP: {ipAddress}");
+    //         }
+    //     }
+    //     catch
+    //     {
+    //         // IP collection failed
+    //     }
+    //
+    //     // Try to get location (requires user permission)
+    //     if (Input.location.isEnabledByUser)
+    //     {
+    //         Input.location.Start();
+    //         int maxWait = 10;
+    //         while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
+    //         {
+    //             yield return new WaitForSeconds(1);
+    //             maxWait--;
+    //         }
+    //
+    //         if (Input.location.status == LocationServiceStatus.Running)
+    //         {
+    //             LocationInfo loc = Input.location.lastData;
+    //             location = $"{loc.latitude:F2}, {loc.longitude:F2}";
+    //             infoPieces.Add($"Location: {location}");
+    //         }
+    //         Input.location.Stop();
+    //     }
+    //
+    //     // Add message if we collected any info
+    //     if (infoPieces.Count > 0)
+    //     {
+    //         string infoMessage = "What's This?: " + string.Join(" • ", infoPieces);
+    //         bubbleTexts.Add(infoMessage);
+    //     }
+    // }
+    //
+    // private string GetLocalIPAddress()
+    // {
+    //     var host = System.Net.Dns.GetHostEntry(System.Net.Dns.GetHostName());
+    //     foreach (var ip in host.AddressList)
+    //     {
+    //         if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+    //         {
+    //             return ip.ToString();
+    //         }
+    //     }
+    //     return "";
+    // }
 }
