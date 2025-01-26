@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,7 +10,8 @@ using UnityEngine.Rendering.Universal;
 public class Dialogue : MonoBehaviour
 {
     //Investors
-    public Investor[] investors;
+    [NonSerialized]
+    public Investor[] investors; //Get from GameManager
     public InvestorScript currentInvestor;
 
     public GameObject[] investorsOnLine;
@@ -38,6 +40,9 @@ public class Dialogue : MonoBehaviour
 
     private void Start()
     {
+        //Get investors from GameManager
+        investors = GameManager.instance.investors.ToArray();
+        
         //PickInvestor();
         typingCoroutine = TypeText();
     }
