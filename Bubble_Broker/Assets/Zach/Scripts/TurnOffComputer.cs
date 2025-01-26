@@ -13,7 +13,6 @@ public class TurnOffComputer : MonoBehaviour
     public void TurnOff()
     {
         logOutPanel.SetActive(false);
-        bootPanel.SetActive(true);
         canvasObject.SetActive(false);
     }
 }
