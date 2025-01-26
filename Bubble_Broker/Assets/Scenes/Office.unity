@@ -2821,6 +2821,7 @@ GameObject:
   - component: {fileID: 1148995174}
   - component: {fileID: 1148995173}
   - component: {fileID: 1148995176}
+  - component: {fileID: 1148995177}
   m_Layer: 5
   m_Name: Computer
   m_TagString: Untagged
@@ -2891,9 +2892,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1148995176}
-        m_TargetAssemblyTypeName: PhoneButton, Assembly-CSharp
-        m_MethodName: TurnOnCanvas
+      - m_Target: {fileID: 1148995177}
+        m_TargetAssemblyTypeName: TurnOnPC, Assembly-CSharp
+        m_MethodName: TurnOn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2955,6 +2956,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvasObject: {fileID: 7526948730056175445}
   otherObject: {fileID: 0}
+--- !u!114 &1148995177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148995171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bba43d1ca597c54693fdc1856432f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasObject: {fileID: 7526948730056175445}
+  progressBar: {fileID: 1788131730045132485}
 --- !u!1 &1172437620
 GameObject:
   m_ObjectHideFlags: 0
@@ -13578,6 +13593,7 @@ GameObject:
   - component: {fileID: 6122864612039048972}
   - component: {fileID: 9070223949059413146}
   - component: {fileID: 9070223949059413147}
+  - component: {fileID: 9070223949059413148}
   m_Layer: 5
   m_Name: ShutDown
   m_TagString: Untagged
@@ -18200,9 +18216,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9070223949059413147}
-        m_TargetAssemblyTypeName: PhoneButton, Assembly-CSharp
-        m_MethodName: TurnOffCanvas
+      - m_Target: {fileID: 9070223949059413148}
+        m_TargetAssemblyTypeName: TurnOffComputer, Assembly-CSharp
+        m_MethodName: TurnOff
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18226,6 +18242,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvasObject: {fileID: 7526948730056175445}
   otherObject: {fileID: 0}
+--- !u!114 &9070223949059413148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5417590422912612588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3787d07974df6db40881d9a906caad4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasObject: {fileID: 7526948730056175445}
+  logOutPanel: {fileID: 4206989211902971852}
+  bootPanel: {fileID: 8444464501114791100}
+  progressBar: {fileID: 1788131730045132485}
 --- !u!222 &9077438874216249804
 CanvasRenderer:
   m_ObjectHideFlags: 0

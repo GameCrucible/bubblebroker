@@ -69,4 +69,11 @@ public class ProgressBar : MonoBehaviour
             panel.SetActive(false);
         }
     }
+    
+    public void rerun()
+    {
+        currentIndex = 0;
+        panel.SetActive(true);
+        StartCoroutine(AnimateProgressBar());
+    }
 }
