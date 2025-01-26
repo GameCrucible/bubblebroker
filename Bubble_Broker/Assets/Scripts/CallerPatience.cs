@@ -56,7 +56,8 @@ public class CallerPatience : MonoBehaviour
             if (timer < 0f)
             {
                 queue--;
-                GameManager.instance.risk += GameManager.instance.currentQuarter; //Increase risk if call is not picked up
+                GameManager.instance.risk += 5;
+                    //GameManager.instance.currentQuarter; //Increase risk if call is not picked up
                 ResetTimer();
             }
         }

@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b942bd775d9033440bdd583a34801ceb, type: 3}
   m_Name: SamMart
   m_EditorClassIdentifier: 
-  topicValue: 35000
+  topicValue: 3500
   romanceResponse: I like big boxes and I cannot lie.
   lieResponse: Online shopping is a fad, I promise stores are coming back.
   firmResponse: Big box stores are fading out, but they're still hold strong.
   investorLine: "I like big box and I cannot lie. I\u2019m seriously incapable of
     lying. If I try to lie, I\u2019ll well\u2014wait what was I saying? Oh yeah,
     I want to invest? I think. YEAH I WANNA INVEST! TAKE ALL MY MONEY! Well maybe
-    not all of it. It\u2019s [Player] right? Can this [$Money] make me all of the
-    monies in the world?"
+    not all of it. It\u2019s Broker right? Can this $3500 make me all of the monies
+    in the world?"

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b942bd775d9033440bdd583a34801ceb, type: 3}
   m_Name: WAD
   m_EditorClassIdentifier: 
-  topicValue: 50000
+  topicValue: 5000
   romanceResponse: "WAD this WAD that, I\u2019m wondering WAD you are up to tonight."
   lieResponse: The WAD is the whole economy! Why not go all in?
   firmResponse: So get this, the WAD is basically the whole economy. Why not invest
     in it all?
   investorLine: Erm. I actually have no idea what this is. Is this some kind of money
-    thing? Will [$Money] be enough? My 3rd uncle twice removed told me this was a
-    smart investment.
+    thing? Will $5000 be enough? My 3rd uncle twice removed told me this was a smart
+    investment.

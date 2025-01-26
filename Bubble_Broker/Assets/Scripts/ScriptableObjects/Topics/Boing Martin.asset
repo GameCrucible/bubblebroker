@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b942bd775d9033440bdd583a34801ceb, type: 3}
   m_Name: Boing Martin
   m_EditorClassIdentifier: 
-  topicValue: 45000
+  topicValue: 4500
   romanceResponse: "Oh you like planes baby, why don\u2019t you fly with me?"
   lieResponse: Merchant of Death? You made that up, they only sell puppies and planes
   firmResponse: "People love to travel! You\u2019ll always need Boing Martin planes"
-  investorLine: "I like planes. [$Money]. I\u2026 Love\u2026 Planes\u2026"
+  investorLine: "I like planes. I\u2026 Love\u2026 Planes\u2026"

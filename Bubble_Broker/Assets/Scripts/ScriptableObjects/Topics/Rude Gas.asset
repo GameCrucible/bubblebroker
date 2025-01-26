@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b942bd775d9033440bdd583a34801ceb, type: 3}
   m_Name: Rude Gas
   m_EditorClassIdentifier: 
-  topicValue: 30000
+  topicValue: 3000
   romanceResponse: The only gas I know is gassing you up baby, leave the money to
     me.
   lieResponse: Electric cars aren't real man, invest in Rude Gas!
   firmResponse: People are going to need gas, why not invest before it's gone?
   investorLine: "Oh boy oh wow, I\u2019m not sure about investing in Rude Gas\u2026
     I\u2019m worried that the industry\u2019ll just completely get overshadowed by
-    Smellectric. Is [$Money] too much to invest? I\u2019m gonna have a cow if this
-    goes bad!!! What do you think, [Player]?"
+    Smellectric. Is 3000 too much to invest? I\u2019m gonna have a cow if this goes
+    bad!!! What do you think?"

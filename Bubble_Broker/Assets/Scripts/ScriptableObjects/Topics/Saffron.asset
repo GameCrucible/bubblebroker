@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b942bd775d9033440bdd583a34801ceb, type: 3}
   m_Name: Saffron
   m_EditorClassIdentifier: 
-  topicValue: 20000
+  topicValue: 2000
   romanceResponse: Saffron is Red, Saffron is Blue, invest with me 'cuz I love you.
   lieResponse: Saffron is NEVER in the red, I promise.
   firmResponse: Investing now is a good idea, after all it'll eventually go red.
-  investorLine: He who controls the Saffron controls the universe. [$Money].
+  investorLine: He who controls the Saffron controls the universe. $2000.

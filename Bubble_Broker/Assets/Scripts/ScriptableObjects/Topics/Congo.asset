@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b942bd775d9033440bdd583a34801ceb, type: 3}
   m_Name: Congo
   m_EditorClassIdentifier: 
-  topicValue: 40000
+  topicValue: 4000
   romanceResponse: Only online shopping I know is dating sites baby
   lieResponse: Online shopping has erased all other stores.
   firmResponse: 'Online shopping is on the rise, invest now while it''s low! '
   investorLine: "Jungle Boogie * Instrumental Section * Jungle Boogie * Instrumental
     Section *. I hear Georffri Pheiznos is doing well these days. Put me down for
-    [$Money], [Player]. Unless you think it\u2019s not groovy?"
+    some cash. Unless you think it\u2019s not groovy?"

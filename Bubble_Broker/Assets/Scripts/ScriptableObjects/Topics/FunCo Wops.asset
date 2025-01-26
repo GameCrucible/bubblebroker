@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b942bd775d9033440bdd583a34801ceb, type: 3}
   m_Name: FunCo Wops
   m_EditorClassIdentifier: 
-  topicValue: 15000
+  topicValue: 1500
   romanceResponse: Why spend money on things in a box babe, I like to play with my
     collectibles.
   lieResponse: Experts say it makes more money the longer you keep it invested.
   firmResponse: FunCo Wops have promise! I expect new lines of revenue soon!
-  investorLine: "Yo yo yo, if it isn\u2019t my good friend, [Player]!!! How\u2019s
+  investorLine: "Yo yo yo, if it isn\u2019t my good friend, Broker!!! How\u2019s
     about those \u201CFunCo Wops\u201D, y\u2019know the ones who made that game site
     go down for a bit? Sounds like a riveting investment to me. I\u2019d be willing
-    to throw [$Money] at it even!"
+    to throw money at it even!"

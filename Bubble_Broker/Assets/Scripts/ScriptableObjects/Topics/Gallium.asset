@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b942bd775d9033440bdd583a34801ceb, type: 3}
   m_Name: Gallium
   m_EditorClassIdentifier: 
-  topicValue: 25000
+  topicValue: 2500
   romanceResponse: "Darling give up your wallet, I promise I\u2019ll be molten."
   lieResponse: Oh yea, Gallium is SO solid.
   firmResponse: Yeah gallium will work pretty solid. Just watch out for its impulse
     to soften out.
   investorLine: "Hey Babes, I\u2019ve been thonkin\u2019 real hard \u2018bout investing
     in some shinies, and by shinies, I\u2019m talking Gallium, the good stuff, or
-    so I\u2019ve heard. [$Money] is on the line, how\u2019bout it?"
+    so I\u2019ve heard. Money is on the line, how\u2019bout it?"

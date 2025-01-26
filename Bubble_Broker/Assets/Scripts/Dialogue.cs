@@ -41,13 +41,36 @@ public class Dialogue : MonoBehaviour
     public AudioSource loseMoney;
     public AudioSource earnMoney;
 
+    public Image patienceProgress;
+
+    private float timer;
+    private bool doneTalking;
+
     private void Start()
     {
         //Get investors from GameManager
         investors = GameManager.instance.investors.ToArray();
-        
+
+        timer = 5f;
+        doneTalking = false;
+
         //PickInvestor();
         typingCoroutine = TypeText();
+    }
+
+    private void Update()
+    {
+        if (doneTalking)
+        {
+            timer -= Time.deltaTime;
+            patienceProgress.fillAmount = (timer / 10f);
+            if (timer < 0)
+            {
+                doneTalking = false;
+                GameManager.instance.risk += GameManager.instance.currentQuarter; //Increase risk if call is not picked up
+                HangUp();
+            }
+        }
     }
 
     public void PickInvestor()
@@ -62,7 +85,7 @@ public class Dialogue : MonoBehaviour
             currentInvestor = Instantiate(investorPrefab).GetComponent<InvestorScript>();
             dialogueImage.sprite = currentInvestor.GetInvestorImage();
             currentTopic = currentInvestor.GetTopic();
-            typingText = currentInvestor.GetName() + " wants to invest in: " + currentTopic.name;
+            typingText = "<b>" + currentInvestor.GetName() + "</b>\n" + currentTopic.investorLine;
             StartTyping();
         }
     }
@@ -89,14 +112,15 @@ public class Dialogue : MonoBehaviour
         {
             if (currentInvestor.investor.dislike == Investor.Choices.Firm)
             {
-                GameManager.instance.risk += (int)(Random.Range(5, 10) * GameManager.instance.currentQuarter * .6f);
+                GameManager.instance.risk += (int)(Random.Range(5, 10));
+                //*GameManager.instance.currentQuarter * .6f
                 HangUp();
                 loseMoney.Play();
                 return;
             }
             
             GameManager.instance.money += (int)currentInvestor.GetFirm(currentTopic.topicValue);
-            moneyText.text = "$: " + GameManager.instance.money;
+            moneyText.text = "" + GameManager.instance.money;
             HangUp();
             earnMoney.Play();
         }
@@ -107,7 +131,8 @@ public class Dialogue : MonoBehaviour
     {
         if (currentInvestor.investor.dislike == Investor.Choices.Lie)
         {
-            GameManager.instance.risk += (int)(Random.Range(5, 10) * GameManager.instance.currentQuarter * .6f);
+            GameManager.instance.risk += (int)(Random.Range(5, 10));
+            //*GameManager.instance.currentQuarter * .6f
             HangUp();
             loseMoney.Play();
             return;
@@ -116,7 +141,7 @@ public class Dialogue : MonoBehaviour
         if (currentInvestor != null)
         {
             GameManager.instance.money += (int)currentInvestor.GetLie(currentTopic.topicValue);
-            moneyText.text = "$: " + GameManager.instance.money;
+            moneyText.text = "" + GameManager.instance.money;
             HangUp();
             earnMoney.Play();
         }
@@ -127,7 +152,8 @@ public class Dialogue : MonoBehaviour
     {
         if (currentInvestor.investor.dislike == Investor.Choices.Romance)
         {
-            GameManager.instance.risk += (int)(Random.Range(5, 10) * GameManager.instance.currentQuarter * .6f);
+            GameManager.instance.risk += (int)(Random.Range(5, 10));
+            //*GameManager.instance.currentQuarter * .6f
             HangUp();
             loseMoney.Play();
             return;
@@ -136,7 +162,7 @@ public class Dialogue : MonoBehaviour
         if(currentInvestor != null)
         {
             GameManager.instance.money += (int)currentInvestor.GetRomance(currentTopic.topicValue);
-            moneyText.text = "$: " + GameManager.instance.money;
+            moneyText.text = "" + GameManager.instance.money;
             currentInvestor.investor.romance += Random.Range(5, 10); //Increase investor romance
             HangUp();
             earnMoney.Play();
@@ -152,6 +178,9 @@ public class Dialogue : MonoBehaviour
         dialogueText.text = "";
         ClearPlayerResponses();
         dialogueImage.sprite = null;
+        doneTalking = false;
+        patienceProgress.fillAmount = 1f;
+        timer = 10f;
         animator.SetBool("PhoneIn", false);
         audioClose.Play();
     }
@@ -166,6 +195,8 @@ public class Dialogue : MonoBehaviour
         firmText.text = currentTopic.firmResponse;
         lieText.text = currentTopic.lieResponse;
         romanceText.text = currentTopic.romanceResponse;
+        doneTalking = true;
+        timer = 10f;
     }
 
     public void ClearPlayerResponses()

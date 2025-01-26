@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
     
     private IEnumerator UpdateDay()
     {
-        while (risk < 100)
+        while (risk < 30)
         {
             yield return new WaitForSeconds(dayTick);  //Time range for days
             currentDay++;
@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
             if (currentDay % fiscalQuarterLength == 0 && currentDay != 0)
             {
                 currentQuarter++;
-                risk -= Random.Range(10, 15);
+                risk += Random.Range(1, 5);
             }
             
             risk = Mathf.Clamp(risk, 0, 100);

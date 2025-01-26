@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b942bd775d9033440bdd583a34801ceb, type: 3}
   m_Name: RTXdia
   m_EditorClassIdentifier: 
-  topicValue: 55000
+  topicValue: 5500
   romanceResponse: Baby invest in RTXdia so you can see me in higher definition
   lieResponse: RTXdia has ZERO competitors in the market, so you have a 100% chance
     of not losing anything!
   firmResponse: RTXdia is always making new products, so they are sure to keep growing.
   investorLine: My grandson told me that he wanted one of these for Chrumbus this
-    year. Am I doing this right? On the website it said they cost [$Money]. Is that
-    good?
+    year. Am I doing this right? On the website it said they cost 5,500 dollars.
+    Is that good?

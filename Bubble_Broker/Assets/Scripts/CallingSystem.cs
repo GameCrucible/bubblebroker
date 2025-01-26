@@ -8,7 +8,7 @@ using UnityEngine.Rendering.Universal;
 
 public class CallingSystem : MonoBehaviour
 {
-    private float timeUntilNextCall = 30f;
+    private float timeUntilNextCall = 15f;
 
     private float timer;
     private float callerTimer;
@@ -25,7 +25,7 @@ public class CallingSystem : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        timer = 5f;
+        timer = 8f;
     }
 
     // Update is called once per frame
