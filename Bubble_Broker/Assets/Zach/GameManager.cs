@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
@@ -52,12 +54,13 @@ public class GameManager : MonoBehaviour
         money = initialMoney;
         
         StartCoroutine(UpdateDay());
+        
+        ResetInvestors();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
     
     private IEnumerator UpdateDay()
@@ -66,13 +69,32 @@ public class GameManager : MonoBehaviour
         {
             yield return new WaitForSeconds(dayTick);  //Time range for days
             currentDay++;
-            risk += Random.Range(1, 3);
         
             if (currentDay % fiscalQuarterLength == 0 && currentDay != 0)
             {
                 currentQuarter++;
                 risk -= Random.Range(10, 15);
             }
+            
+            risk = Mathf.Clamp(risk, 0, 100);
+            
+            Debug.Log("Risk: " + risk);
         }
+
+        GameOver();
+    }
+    
+    private void ResetInvestors()
+    {
+        foreach (var investor in investors)
+        {
+            investor.romanceMultiplier = 0.5f;
+            investor.romance = 0;
+        }
+    }
+    
+    public void GameOver()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 }

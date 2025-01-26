@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -5,11 +6,13 @@ using TMPro;
 using System.Collections;
 using System.Data;
 using UnityEngine.Rendering.Universal;
+using Random = UnityEngine.Random;
 
 public class Dialogue : MonoBehaviour
 {
     //Investors
-    public Investor[] investors;
+    [NonSerialized]
+    public Investor[] investors; //Get from GameManager
     public InvestorScript currentInvestor;
 
     public GameObject[] investorsOnLine;
@@ -20,7 +23,7 @@ public class Dialogue : MonoBehaviour
 
     public Animator animator;
 
-    private float money = 0;
+    //private float money = 0; //Get from GameManager
 
     public Image dialogueImage;
 
@@ -35,9 +38,14 @@ public class Dialogue : MonoBehaviour
 
     public AudioSource audio;
     public AudioSource audioClose;
+    public AudioSource loseMoney;
+    public AudioSource earnMoney;
 
     private void Start()
     {
+        //Get investors from GameManager
+        investors = GameManager.instance.investors.ToArray();
+        
         //PickInvestor();
         typingCoroutine = TypeText();
     }
@@ -79,31 +87,59 @@ public class Dialogue : MonoBehaviour
     {
         if (currentInvestor!=null)
         {
-            money += currentInvestor.GetFirm(currentTopic.topicValue);
-            moneyText.text = "$: " + money;
+            if (currentInvestor.investor.dislike == Investor.Choices.Firm)
+            {
+                GameManager.instance.risk += (int)(Random.Range(5, 10) * GameManager.instance.currentQuarter * .6f);
+                HangUp();
+                loseMoney.Play();
+                return;
+            }
+            
+            GameManager.instance.money += (int)currentInvestor.GetFirm(currentTopic.topicValue);
+            moneyText.text = "$: " + GameManager.instance.money;
             HangUp();
+            earnMoney.Play();
         }
         
     }
 
     public void LieOption()
     {
+        if (currentInvestor.investor.dislike == Investor.Choices.Lie)
+        {
+            GameManager.instance.risk += (int)(Random.Range(5, 10) * GameManager.instance.currentQuarter * .6f);
+            HangUp();
+            loseMoney.Play();
+            return;
+        }
+        
         if (currentInvestor != null)
         {
-            money += currentInvestor.GetLie(currentTopic.topicValue);
-            moneyText.text = "$: " + money;
+            GameManager.instance.money += (int)currentInvestor.GetLie(currentTopic.topicValue);
+            moneyText.text = "$: " + GameManager.instance.money;
             HangUp();
+            earnMoney.Play();
         }
         
     }
 
     public void RomanceOption()
     {
+        if (currentInvestor.investor.dislike == Investor.Choices.Romance)
+        {
+            GameManager.instance.risk += (int)(Random.Range(5, 10) * GameManager.instance.currentQuarter * .6f);
+            HangUp();
+            loseMoney.Play();
+            return;
+        }
+        
         if(currentInvestor != null)
         {
-            money += currentInvestor.GetRomance(currentTopic.topicValue);
-            moneyText.text = "$: " + money;
+            GameManager.instance.money += (int)currentInvestor.GetRomance(currentTopic.topicValue);
+            moneyText.text = "$: " + GameManager.instance.money;
+            currentInvestor.investor.romance += Random.Range(5, 10); //Increase investor romance
             HangUp();
+            earnMoney.Play();
         }
         
     }

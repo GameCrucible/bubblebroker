@@ -53,7 +53,7 @@ public class CallerPatience : MonoBehaviour
             if (timer < 0f)
             {
                 queue--;
-                Debug.Log("failed to pick up call");
+                GameManager.instance.risk += GameManager.instance.currentQuarter; //Increase risk if call is not picked up
                 ResetTimer();
             }
         }

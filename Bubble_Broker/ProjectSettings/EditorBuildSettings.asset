@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DialogueSystem.unity
     guid: ea1474dc266f5d449a31ce46c4c6a3c8
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: d7c54e0f908339444b3d5079a67ea1af
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
