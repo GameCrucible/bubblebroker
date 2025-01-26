@@ -137,6 +137,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("Risk: " + risk);
         }
 
+        money = (int)(money * Random.Range(0.25f, 0.5f)); //Lose money on pop
 
         GameOver();
     }
