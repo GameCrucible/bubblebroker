@@ -10,7 +10,19 @@ public class GameManager : MonoBehaviour
 {
     //Vars
     public static GameManager instance;
-    
+    public GameObject gameOver;
+    public GameObject phone;
+    public GameObject computer;
+    public GameObject mainCanvas;
+    public GameObject gameMechanics;
+    public GameObject goodEnd;
+    public GameObject badEnd;
+    public GameObject Day1;
+    public GameObject q1;
+    public GameObject q2;
+    public GameObject q3;
+    public GameObject q4;
+
     [NonSerialized] public int risk = 0;
     [NonSerialized] public float dayTick = 2;
     
@@ -73,6 +85,7 @@ public class GameManager : MonoBehaviour
             if (currentDay % fiscalQuarterLength == 0 && currentDay != 0)
             {
                 currentQuarter++;
+                currentDay = 1;
                 risk += Random.Range(1, 5);
             }
             
@@ -81,9 +94,12 @@ public class GameManager : MonoBehaviour
             Debug.Log("Risk: " + risk);
         }
 
+
         GameOver();
     }
-    
+
+
+
     private void ResetInvestors()
     {
         foreach (var investor in investors)
@@ -95,6 +111,11 @@ public class GameManager : MonoBehaviour
     
     public void GameOver()
     {
-        SceneManager.LoadScene("GameOver");
+        gameOver.SetActive(true);
+        badEnd.SetActive(true);
+        phone.SetActive(false);
+        computer.SetActive(false);
+        mainCanvas.SetActive(false);
+        gameMechanics.SetActive(false);
     }
 }

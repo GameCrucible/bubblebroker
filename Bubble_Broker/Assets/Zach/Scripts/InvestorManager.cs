@@ -98,7 +98,7 @@ public class InvestorManager : MonoBehaviour
 
         // Handle dislikes
         dislikes.text = GetDislikeText(investor);
-        romance.text = $"Romance: {investor.romance * 100}%";
+        romance.text = $"Romance: {investor.romance}%";
     }
 
     private string GetDislikeText(Investor investor)

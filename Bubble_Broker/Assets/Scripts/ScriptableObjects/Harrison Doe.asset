@@ -21,6 +21,6 @@ MonoBehaviour:
   firmMultiplier: 0
   lieMultiplier: 1.5
   romanceMultiplier: 0.5
-  romance: 0
+  romance: 8
   talkSpeed: 0.01
   dislike: 0

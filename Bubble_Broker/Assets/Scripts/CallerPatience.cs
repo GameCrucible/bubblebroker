@@ -6,6 +6,7 @@ public class CallerPatience : MonoBehaviour
     private float timer;
     private bool callPickedUp = false;
     public AudioSource audio;
+    public AudioSource hangup;
     public Animator ringAnimator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -57,6 +58,7 @@ public class CallerPatience : MonoBehaviour
             {
                 queue--;
                 GameManager.instance.risk += 5;
+                hangup.Play();
                     //GameManager.instance.currentQuarter; //Increase risk if call is not picked up
                 ResetTimer();
             }

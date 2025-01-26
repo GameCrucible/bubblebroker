@@ -37,7 +37,6 @@ public class MainMenu : MonoBehaviour
         }
         else if (tutorialStep == 2)
         {
-            CanvasTutorial3.SetActive(false);
             SceneManager.LoadScene("Office");
         }
         

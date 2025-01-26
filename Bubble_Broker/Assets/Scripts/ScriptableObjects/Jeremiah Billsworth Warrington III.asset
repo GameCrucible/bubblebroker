@@ -18,9 +18,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c93aa3176de66ab4da8960a507a9f3f5, type: 2}
   image: {fileID: 2232417850107050308, guid: 12335826041a1b049b4c2b0a4e2b1005, type: 3}
   computerImage: {fileID: -6916097598124409596, guid: 3088afd5a0544e94b9da75268a33040e, type: 3}
-  firmMultiplier: 1.5
-  lieMultiplier: 1
-  romanceMultiplier: 0.5
+  firmMultiplier: 1
+  lieMultiplier: 1.5
+  romanceMultiplier: 0
   romance: 0
-  talkSpeed: 0.1
+  talkSpeed: 0.01
   dislike: 2

@@ -20,7 +20,7 @@ MonoBehaviour:
   computerImage: {fileID: 5531503479418200926, guid: 3088afd5a0544e94b9da75268a33040e, type: 3}
   firmMultiplier: 1.5
   lieMultiplier: 1
-  romanceMultiplier: 0.5
+  romanceMultiplier: 0
   romance: 0
-  talkSpeed: 0.05
+  talkSpeed: 0.01
   dislike: 2
