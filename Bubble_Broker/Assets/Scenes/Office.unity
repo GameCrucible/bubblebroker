@@ -5214,7 +5214,7 @@ MonoBehaviour:
   badEnd: {fileID: 1755026098}
   upRisk: {fileID: 1436139615}
   currentRisk: 0
-  fiscalQuarterLength: 60
+  fiscalQuarterLength: 30
   money: 0
   initialMoney: 10000
   investors:
@@ -5234,7 +5234,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 166ca291571dbcd4db7764cee0726f85, type: 2}
   - {fileID: 11400000, guid: 6caa6cbae6ec4ea4584be75bd59c19ec, type: 2}
   - {fileID: 11400000, guid: 6e9ef2c9be449d94595d209330358ab9, type: 2}
-  cashOut: {fileID: 186097476}
   sticky: {fileID: 2108789831}
   stickyText: {fileID: 498807878}
   q1Texture: {fileID: 662831903838876345, guid: 75e7bf6dc404ded43ae2eb2b52dc9020, type: 3}
