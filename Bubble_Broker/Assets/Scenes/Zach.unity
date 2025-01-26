@@ -1046,6 +1046,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173122619}
   m_CullTransparentMesh: 1
+--- !u!1 &188167880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 188167882}
+  - component: {fileID: 188167881}
+  m_Layer: 0
+  m_Name: YouTube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &188167881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188167880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 849aa8b9a8cb6b441a169d68cd4a35f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  youtubeURL: https://www.youtube.com/watch?v=xvFZjo5PgG0
+--- !u!4 &188167882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188167880}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1269.2561, y: 703.52893, z: 6.3628845}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &201934740
 GameObject:
   m_ObjectHideFlags: 0
@@ -9032,6 +9077,18 @@ PrefabInstance:
       propertyPath: clickSound
       value: 
       objectReference: {fileID: 101559810}
+    - target: {fileID: 5486045462286233345, guid: 38ea13c8d53770d4fb9f77370f6302b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 188167881}
+    - target: {fileID: 5486045462286233345, guid: 38ea13c8d53770d4fb9f77370f6302b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenYouTube
+      objectReference: {fileID: 0}
+    - target: {fileID: 5486045462286233345, guid: 38ea13c8d53770d4fb9f77370f6302b0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: YouTubeOpener, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6763205827006041336, guid: 38ea13c8d53770d4fb9f77370f6302b0, type: 3}
       propertyPath: panel
       value: 
@@ -9171,3 +9228,4 @@ SceneRoots:
   - {fileID: 101559811}
   - {fileID: 1673722150}
   - {fileID: 41931595}
+  - {fileID: 188167882}
