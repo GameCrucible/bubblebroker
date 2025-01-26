@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8c41567455cc404c8f1e3368a6da8fa, type: 3}
-  m_Name: Char 4
+  m_Name: The Chosen One
   m_EditorClassIdentifier: 
   topic:
   - {fileID: 11400000, guid: af6dbecef44111347b0ec4fbca8fa249, type: 2}
-  - {fileID: 11400000, guid: 556aee036004cab458959987af9fac56, type: 2}
-  - {fileID: 11400000, guid: 06e4835918134d646bff0c3e85fbfb8b, type: 2}
-  image: {fileID: 5452768243214242392, guid: b8d7f16781b92a14fbe7ce7c061bf215, type: 3}
-  computerImage: {fileID: 1519754793368917967, guid: 3088afd5a0544e94b9da75268a33040e, type: 3}
+  - {fileID: 11400000, guid: c93aa3176de66ab4da8960a507a9f3f5, type: 2}
+  - {fileID: 11400000, guid: 44f9ab99f2a4b28498652566a23b140c, type: 2}
+  image: {fileID: -6624397670993649684, guid: 7d9f4629a95644540bdaa4c540a22d24, type: 3}
+  computerImage: {fileID: 1922073300451250376, guid: 3088afd5a0544e94b9da75268a33040e, type: 3}
   firmMultiplier: 100
   lieMultiplier: 0
   romanceMultiplier: 1

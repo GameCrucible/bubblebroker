@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8c41567455cc404c8f1e3368a6da8fa, type: 3}
-  m_Name: Char 5
+  m_Name: Johnny Poe
   m_EditorClassIdentifier: 
   topic:
-  - {fileID: 11400000, guid: 40198a4aa7faaec4990aa692b4d43423, type: 2}
-  - {fileID: 11400000, guid: b6581f4733e991c43820bc04b1529257, type: 2}
+  - {fileID: 11400000, guid: 997dcf3b74c5e3b4d9bd8d4f8d8fcb45, type: 2}
+  - {fileID: 11400000, guid: 19a9d2932ec7779429b24e2f847b1c47, type: 2}
   - {fileID: 11400000, guid: 6a14f5268803b5e4084c5c05b0bb7e1a, type: 2}
-  image: {fileID: 7508484680467009349, guid: b426e731eb29cf049b53ccbfe7155aae, type: 3}
-  computerImage: {fileID: 3669785234374908736, guid: 3088afd5a0544e94b9da75268a33040e, type: 3}
-  firmMultiplier: 1
-  lieMultiplier: 100
-  romanceMultiplier: 0
+  image: {fileID: 4762582683979711972, guid: 3b6f8c890c5264643b36ab2065e3836c, type: 3}
+  computerImage: {fileID: 8382213725418124287, guid: 3088afd5a0544e94b9da75268a33040e, type: 3}
+  firmMultiplier: 0
+  lieMultiplier: 1
+  romanceMultiplier: 100
   romance: 0
   talkSpeed: 0

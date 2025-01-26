@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8c41567455cc404c8f1e3368a6da8fa, type: 3}
-  m_Name: Char 11
+  m_Name: Raven Blood, Squire
   m_EditorClassIdentifier: 
   topic:
+  - {fileID: 11400000, guid: 06e4835918134d646bff0c3e85fbfb8b, type: 2}
   - {fileID: 11400000, guid: 997dcf3b74c5e3b4d9bd8d4f8d8fcb45, type: 2}
-  - {fileID: 11400000, guid: 19a9d2932ec7779429b24e2f847b1c47, type: 2}
-  - {fileID: 11400000, guid: 6a14f5268803b5e4084c5c05b0bb7e1a, type: 2}
-  image: {fileID: 4762582683979711972, guid: 3b6f8c890c5264643b36ab2065e3836c, type: 3}
-  computerImage: {fileID: 8382213725418124287, guid: 3088afd5a0544e94b9da75268a33040e, type: 3}
-  firmMultiplier: 0
-  lieMultiplier: 1
+  - {fileID: 11400000, guid: c93aa3176de66ab4da8960a507a9f3f5, type: 2}
+  image: {fileID: -1662843352530915255, guid: 9ab475cc9767b5744ba85b7a65ecec65, type: 3}
+  computerImage: {fileID: 4354662113705062542, guid: 3088afd5a0544e94b9da75268a33040e, type: 3}
+  firmMultiplier: 1
+  lieMultiplier: 0
   romanceMultiplier: 100
   romance: 0
   talkSpeed: 0

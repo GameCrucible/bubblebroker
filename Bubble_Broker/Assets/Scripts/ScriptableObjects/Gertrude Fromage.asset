@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8c41567455cc404c8f1e3368a6da8fa, type: 3}
-  m_Name: Char 3
+  m_Name: Gertrude Fromage
   m_EditorClassIdentifier: 
   topic:
+  - {fileID: 11400000, guid: 40198a4aa7faaec4990aa692b4d43423, type: 2}
   - {fileID: 11400000, guid: 44f9ab99f2a4b28498652566a23b140c, type: 2}
-  - {fileID: 11400000, guid: 997dcf3b74c5e3b4d9bd8d4f8d8fcb45, type: 2}
-  - {fileID: 11400000, guid: 19a9d2932ec7779429b24e2f847b1c47, type: 2}
-  image: {fileID: -201573519503496745, guid: c483317a9476b3e4b9ecd3b63dd53d66, type: 3}
-  computerImage: {fileID: -8027594619225627149, guid: 3088afd5a0544e94b9da75268a33040e, type: 3}
+  - {fileID: 11400000, guid: c93aa3176de66ab4da8960a507a9f3f5, type: 2}
+  image: {fileID: -3802496618059931693, guid: fd738683d1f4d1241badde23a9f5b529, type: 3}
+  computerImage: {fileID: 2218557884210546784, guid: 3088afd5a0544e94b9da75268a33040e, type: 3}
   firmMultiplier: 1
-  lieMultiplier: 0
-  romanceMultiplier: 100
+  lieMultiplier: 100
+  romanceMultiplier: 0
   romance: 0
   talkSpeed: 0

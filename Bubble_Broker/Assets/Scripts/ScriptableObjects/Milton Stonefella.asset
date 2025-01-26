@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8c41567455cc404c8f1e3368a6da8fa, type: 3}
-  m_Name: BillPocket
+  m_Name: Milton Stonefella
   m_EditorClassIdentifier: 
   topic:
-  - {fileID: 11400000, guid: af6dbecef44111347b0ec4fbca8fa249, type: 2}
-  - {fileID: 11400000, guid: 6a14f5268803b5e4084c5c05b0bb7e1a, type: 2}
+  - {fileID: 11400000, guid: 06e4835918134d646bff0c3e85fbfb8b, type: 2}
   - {fileID: 11400000, guid: b6581f4733e991c43820bc04b1529257, type: 2}
-  image: {fileID: -2030773411343618624, guid: b8951cdb595be924e94b608ade2a0bb3, type: 3}
-  computerImage: {fileID: 5531503479418200926, guid: 3088afd5a0544e94b9da75268a33040e, type: 3}
+  - {fileID: 11400000, guid: 556aee036004cab458959987af9fac56, type: 2}
+  image: {fileID: -7644374185654875420, guid: ac2f24ba752244b4289908137dd98b47, type: 3}
+  computerImage: {fileID: -1695245849471637346, guid: 3088afd5a0544e94b9da75268a33040e, type: 3}
   firmMultiplier: 0
-  lieMultiplier: 100
-  romanceMultiplier: 1
+  lieMultiplier: 1
+  romanceMultiplier: 100
   romance: 0
-  talkSpeed: 0.05
+  talkSpeed: 0
