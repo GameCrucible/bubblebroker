@@ -7,6 +7,8 @@ public class Investor : ScriptableObject
 
     public Sprite image;
 
+    public Sprite computerImage;
+
     public float firmMultiplier;
     public float lieMultiplier;
     public float romanceMultiplier;
