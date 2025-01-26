@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      scammer_0: -942207459793458079
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

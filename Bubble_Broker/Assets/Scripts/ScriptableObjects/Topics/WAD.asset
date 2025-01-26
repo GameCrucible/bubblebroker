@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: WAD
   m_EditorClassIdentifier: 
   topicValue: 50000
-  romanceResponse: q
-  lieResponse: w
-  firmResponse: e
+  romanceResponse: "WAD this WAD that, I\u2019m wondering WAD you are up to tonight."
+  lieResponse: The WAD is the whole economy! Why not go all in?
+  firmResponse: So get this, the WAD is basically the whole economy. Why not invest
+    in it all?

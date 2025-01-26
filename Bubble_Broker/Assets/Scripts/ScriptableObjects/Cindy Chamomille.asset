@@ -22,5 +22,5 @@ MonoBehaviour:
   lieMultiplier: 1.5
   romanceMultiplier: 0.5
   romance: 0
-  talkSpeed: 0
+  talkSpeed: 0.05
   dislike: 2

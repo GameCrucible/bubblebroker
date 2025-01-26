@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Gallium
   m_EditorClassIdentifier: 
   topicValue: 25000
-  romanceResponse: GalliumFLirt
+  romanceResponse: "Darling give up your wallet, I promise I\u2019ll be molten."
   lieResponse: Oh yea, Gallium is SO solid.
   firmResponse: Yeah gallium will work pretty solid. Just watch out for its impulse
     to soften out.

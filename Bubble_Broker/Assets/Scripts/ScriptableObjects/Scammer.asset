@@ -18,6 +18,7 @@ MonoBehaviour:
   computerImage: {fileID: 0}
   firmMultiplier: -5
   lieMultiplier: -5
-  romanceMultiplier: -5
+  romanceMultiplier: 0.5
   romance: 0
-  talkSpeed: 0.3
+  talkSpeed: 0.5
+  dislike: 0
