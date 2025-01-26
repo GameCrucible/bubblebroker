@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8c41567455cc404c8f1e3368a6da8fa, type: 3}
+<<<<<<<< Updated upstream:Bubble_Broker/Assets/Scripts/ScriptableObjects/Milton Stonefella.asset
+  m_Name: Milton Stonefella
+========
+  m_Name: Mortimer Featherstone
+>>>>>>>> Stashed changes:Bubble_Broker/Assets/Scripts/ScriptableObjects/Mortimer Featherstone.asset
+  m_EditorClassIdentifier: 
+  topic:
+  - {fileID: 11400000, guid: 06e4835918134d646bff0c3e85fbfb8b, type: 2}
+  - {fileID: 11400000, guid: b6581f4733e991c43820bc04b1529257, type: 2}
+  - {fileID: 11400000, guid: 556aee036004cab458959987af9fac56, type: 2}
+  image: {fileID: -7644374185654875420, guid: ac2f24ba752244b4289908137dd98b47, type: 3}
+  computerImage: {fileID: -1695245849471637346, guid: 3088afd5a0544e94b9da75268a33040e, type: 3}
+  firmMultiplier: 0
+  lieMultiplier: 1
+  romanceMultiplier: 100
+  romance: 0
+  talkSpeed: 0
