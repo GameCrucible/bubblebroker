@@ -118,7 +118,7 @@ public class BubblesManager : MonoBehaviour
         clickSound.Play();
         
         //Set message
-        string message = "Hey! I'm Bubbles! Your friendly AI assistant. Keep me entertained or else...";
+        string message = "Hey! I'm Babaru! Your friendly AI assistant. Keep me entertained or else...";
         
         // Cancel existing coroutines
         if (currentRoutine != null)
