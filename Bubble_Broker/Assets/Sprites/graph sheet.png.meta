@@ -272,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      graph sheet_0: 2129246051586152532
+      graph sheet_1: -3190337177412761916
+      graph sheet_2: 8066349829838380184
+      graph sheet_3: 1029711232948505600
+      graph sheet_4: 5019045023356657510
+      graph sheet_5: 6056276940550984301
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

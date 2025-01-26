@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topic:
   - {fileID: 11400000, guid: 06e4835918134d646bff0c3e85fbfb8b, type: 2}
-  image: {fileID: 1084411809941084949, guid: e1a6f650b57dafc448ecc2f62b12db71, type: 3}
+  image: {fileID: -942207459793458079, guid: 10486b083c6b92a49b120b23f647c78e, type: 3}
+  computerImage: {fileID: 0}
   firmMultiplier: -5
   lieMultiplier: -5
   romanceMultiplier: -5
