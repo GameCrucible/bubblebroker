@@ -1,9 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
@@ -27,8 +30,8 @@ public class GameManager : MonoBehaviour
     [NonSerialized] public float dayTick = 2;
     
     [Tooltip("In game days for a quarter to pass.")]
-    [Range(60, 90)]
-    public int fiscalQuarterLength = 60;
+    [Range(30, 90)]
+    public int fiscalQuarterLength = 45;
     
     [NonSerialized] public int currentQuarter = 1;
     [NonSerialized] public int currentDay = 1;
@@ -38,6 +41,16 @@ public class GameManager : MonoBehaviour
     public int initialMoney = 10000;
     
     public List<Investor> investors = new List<Investor>();
+
+    public GameObject cashOut;
+
+    [Header("Quarter Sticky")] 
+    public Image sticky;
+    public TextMeshProUGUI stickyText;
+    public Sprite q1Texture;
+    public Sprite q2Texture;
+    public Sprite q3Texture;
+    public Sprite q4Texture;
 
     //Ensure only one instance of the GameManager exists
     private void Awake()
@@ -77,7 +90,7 @@ public class GameManager : MonoBehaviour
     
     private IEnumerator UpdateDay()
     {
-        while (risk < 30)
+        while (risk < 100)
         {
             yield return new WaitForSeconds(dayTick);  //Time range for days
             currentDay++;
@@ -87,6 +100,31 @@ public class GameManager : MonoBehaviour
                 currentQuarter++;
                 currentDay = 1;
                 risk += Random.Range(1, 5);
+                
+                //Reset Q5 to Q1
+                if (currentQuarter == 5)
+                {
+                    currentQuarter = 1;
+                    cashOut.SetActive(false);
+                    stickyText.text = "Q1";
+                    sticky.sprite = q1Texture;
+                }
+                else if (currentQuarter == 2)
+                {
+                    stickyText.text = "Q2";
+                    sticky.sprite = q2Texture;
+                }
+                else if (currentQuarter == 3)
+                {
+                    stickyText.text = "Q3";
+                    sticky.sprite = q3Texture;
+                }
+                else if (currentQuarter == 4)
+                {
+                    stickyText.text = "Q4";
+                    sticky.sprite = q4Texture;
+                    cashOut.SetActive(true);
+                }
             }
             
             risk = Mathf.Clamp(risk, 0, 100);

@@ -120,7 +120,7 @@ public class Dialogue : MonoBehaviour
             }
             
             GameManager.instance.money += (int)currentInvestor.GetFirm(currentTopic.topicValue);
-            moneyText.text = "" + GameManager.instance.money;
+            moneyText.text = "$" + GameManager.instance.money.ToString("N0");
             HangUp();
             earnMoney.Play();
         }
@@ -141,7 +141,7 @@ public class Dialogue : MonoBehaviour
         if (currentInvestor != null)
         {
             GameManager.instance.money += (int)currentInvestor.GetLie(currentTopic.topicValue);
-            moneyText.text = "" + GameManager.instance.money;
+            moneyText.text = "$" + GameManager.instance.money.ToString("N0");
             HangUp();
             earnMoney.Play();
         }
@@ -162,7 +162,7 @@ public class Dialogue : MonoBehaviour
         if(currentInvestor != null)
         {
             GameManager.instance.money += (int)currentInvestor.GetRomance(currentTopic.topicValue);
-            moneyText.text = "" + GameManager.instance.money;
+            moneyText.text = "$" + GameManager.instance.money.ToString("N0");
             currentInvestor.investor.romance += Random.Range(5, 10); //Increase investor romance
             HangUp();
             earnMoney.Play();
