@@ -174,11 +174,13 @@ public class BubblesManager : MonoBehaviour
         }
 
         // Add message if we collected any info
+        /**
         if (infoPieces.Count > 0)
         {
             string infoMessage = "What's This?: " + string.Join(" • ", infoPieces);
             bubbleTexts.Add(infoMessage);
         }
+        */
     }
 
     private string GetLocalIPAddress()
