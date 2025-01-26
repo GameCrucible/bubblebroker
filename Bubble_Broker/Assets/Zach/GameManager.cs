@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     
     [NonSerialized] public int currentQuarter = 1;
     [NonSerialized] public int currentDay = 1;
-    [NonSerialized] public int money = 0;
+    public int money = 0;
     
     [Tooltip("Starting money for the player.")]
     public int initialMoney = 10000;
