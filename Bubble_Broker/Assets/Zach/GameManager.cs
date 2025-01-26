@@ -20,14 +20,17 @@ public class GameManager : MonoBehaviour
     public GameObject gameMechanics;
     public GameObject goodEnd;
     public GameObject badEnd;
-    public GameObject Day1;
-    public GameObject q1;
-    public GameObject q2;
-    public GameObject q3;
-    public GameObject q4;
+    // public GameObject Day1;
+    // public GameObject q1;
+    // public GameObject q2;
+    // public GameObject q3;
+    // public GameObject q4;
+
+    public AudioSource upRisk;
 
     [NonSerialized] public int risk = 0;
     [NonSerialized] public float dayTick = 2;
+    public int currentRisk = 0;
     
     [Tooltip("In game days for a quarter to pass.")]
     [Range(30, 90)]
@@ -94,6 +97,12 @@ public class GameManager : MonoBehaviour
         {
             yield return new WaitForSeconds(dayTick);  //Time range for days
             currentDay++;
+
+            if (currentRisk < risk)
+            {
+                currentRisk = risk;
+                upRisk.Play();
+            }
         
             if (currentDay % fiscalQuarterLength == 0 && currentDay != 0)
             {
