@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviour
             {
                 currentQuarter++;
                 currentDay = 1;
-                risk += Random.Range(1, 5);
+                risk -= Random.Range(5, 10);
                 
                 //Reset Q5 to Q1
                 if (currentQuarter == 5)
