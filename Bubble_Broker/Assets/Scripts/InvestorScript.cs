@@ -10,7 +10,8 @@ public class InvestorScript : MonoBehaviour
 
     void Awake()
     {
-        investor = investorList[Random.Range(0, investorList.Length)];
+        //investor = investorList[Random.Range(0, investorList.Length)];
+        investor = GameManager.instance.investors[Random.Range(0, GameManager.instance.investors.Count)];
         topic = investor.GetTopic();
     }
 

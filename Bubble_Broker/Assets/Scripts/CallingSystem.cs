@@ -8,7 +8,7 @@ using UnityEngine.Rendering.Universal;
 
 public class CallingSystem : MonoBehaviour
 {
-    private float timeUntilNextCall = 20f;
+    private float timeUntilNextCall = 30f;
 
     private float timer;
     private float callerTimer;
@@ -55,7 +55,6 @@ public class CallingSystem : MonoBehaviour
     {
         timeUntilNextCall -= 0.2f;
         timer = Random.Range(timeUntilNextCall - 5f, timeUntilNextCall + 5f);
-
     }
 
 }
