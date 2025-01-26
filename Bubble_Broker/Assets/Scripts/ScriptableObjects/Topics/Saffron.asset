@@ -16,3 +16,4 @@ MonoBehaviour:
   romanceResponse: Saffron is Red, Saffron is Blue, invest with me 'cuz I love you.
   lieResponse: Saffron is NEVER in the red, I promise.
   firmResponse: Investing now is a good idea, after all it'll eventually go red.
+  investorLine: He who controls the Saffron controls the universe. [$Money].

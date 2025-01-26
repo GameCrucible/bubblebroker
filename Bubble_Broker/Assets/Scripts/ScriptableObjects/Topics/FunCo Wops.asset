@@ -17,3 +17,7 @@ MonoBehaviour:
     collectibles.
   lieResponse: Experts say it makes more money the longer you keep it invested.
   firmResponse: FunCo Wops have promise! I expect new lines of revenue soon!
+  investorLine: "Yo yo yo, if it isn\u2019t my good friend, [Player]!!! How\u2019s
+    about those \u201CFunCo Wops\u201D, y\u2019know the ones who made that game site
+    go down for a bit? Sounds like a riveting investment to me. I\u2019d be willing
+    to throw [$Money] at it even!"

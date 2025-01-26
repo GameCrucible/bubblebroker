@@ -17,3 +17,7 @@ MonoBehaviour:
     me.
   lieResponse: Electric cars aren't real man, invest in Rude Gas!
   firmResponse: People are going to need gas, why not invest before it's gone?
+  investorLine: "Oh boy oh wow, I\u2019m not sure about investing in Rude Gas\u2026
+    I\u2019m worried that the industry\u2019ll just completely get overshadowed by
+    Smellectric. Is [$Money] too much to invest? I\u2019m gonna have a cow if this
+    goes bad!!! What do you think, [Player]?"

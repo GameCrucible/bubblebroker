@@ -7,5 +7,6 @@ public class Topics : ScriptableObject
     public string romanceResponse;
     public string lieResponse;
     public string firmResponse;
+    public string investorLine;
     
 }
