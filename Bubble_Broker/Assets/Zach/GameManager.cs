@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour
     public GameObject computer;
     public GameObject mainCanvas;
     public GameObject gameMechanics;
-    public GameObject goodEnd;
     public GameObject badEnd;
     // public GameObject Day1;
     // public GameObject q1;

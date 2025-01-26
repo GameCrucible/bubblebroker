@@ -4165,6 +4165,7 @@ GameObject:
   - component: {fileID: 1462941227}
   - component: {fileID: 1462941226}
   - component: {fileID: 1462941225}
+  - component: {fileID: 1462941228}
   m_Layer: 5
   m_Name: CashOut
   m_TagString: Untagged
@@ -4235,7 +4236,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1794325553}
+      - m_Target: {fileID: 1462941228}
         m_TargetAssemblyTypeName: CashOutScript, Assembly-CSharp
         m_MethodName: CashOut
         m_Mode: 1
@@ -4285,6 +4286,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462941223}
   m_CullTransparentMesh: 1
+--- !u!114 &1462941228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462941223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c69827566899f42aecc06130226fb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cashOutButton: {fileID: 1462941223}
+  gameOver: {fileID: 452047275}
+  phone: {fileID: 917558200575447914}
+  computer: {fileID: 7682102832402973502}
+  mainCanvas: {fileID: 1880494812}
+  gameMechanics: {fileID: 2111230889}
+  goodEnd: {fileID: 593862606}
 --- !u!82 &1518334168
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5221,7 +5241,6 @@ MonoBehaviour:
   computer: {fileID: 7682102832402973502}
   mainCanvas: {fileID: 1880494812}
   gameMechanics: {fileID: 2111230889}
-  goodEnd: {fileID: 593862606}
   badEnd: {fileID: 1755026098}
   upRisk: {fileID: 1436139615}
   currentRisk: 0
@@ -5264,6 +5283,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cashOutButton: {fileID: 1462941223}
+  gameOver: {fileID: 0}
+  phone: {fileID: 0}
+  computer: {fileID: 0}
+  mainCanvas: {fileID: 0}
+  gameMechanics: {fileID: 0}
+  goodEnd: {fileID: 0}
 --- !u!1 &1830279101
 GameObject:
   m_ObjectHideFlags: 0
