@@ -54,6 +54,7 @@ public class CallingSystem : MonoBehaviour
     public void ResetTimer()
     {
         timeUntilNextCall -= 0.2f;
+        timeUntilNextCall = Mathf.Clamp(timeUntilNextCall, 0.5f, 100f);
         timer = Random.Range(timeUntilNextCall - 5f, timeUntilNextCall + 5f);
     }
 

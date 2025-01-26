@@ -16,7 +16,7 @@ public class ScoreText : MonoBehaviour
     void Update()
     {
         //Format to dollars
-        text.text = "Your Score:" + GameManager.instance.money.ToString("N0");
+        text.text = GameManager.instance.money.ToString("N0");
     }
 
     public void ResetGame()
