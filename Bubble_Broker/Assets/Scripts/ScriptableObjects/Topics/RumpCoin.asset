@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: RumpCoin
   m_EditorClassIdentifier: 
   topicValue: 10000
-  romanceResponse: q
-  lieResponse: w
-  firmResponse: e
+  romanceResponse: Wheter it all yellow or orange, it's just green to me hon.
+  lieResponse: I heard it's in the orange, surely that's a good thing.
+  firmResponse: That's a new one in the market, I think it's got a chance to work
+    out.

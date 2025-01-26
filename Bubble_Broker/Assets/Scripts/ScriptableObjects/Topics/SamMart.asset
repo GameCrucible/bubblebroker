@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SamMart
   m_EditorClassIdentifier: 
   topicValue: 35000
-  romanceResponse: q
-  lieResponse: w
-  firmResponse: e
+  romanceResponse: I like big boxes and I cannot lie.
+  lieResponse: Online shopping is a fad, I promise stores are coming back.
+  firmResponse: Big box stores are fading out, but they're still hold strong.

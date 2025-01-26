@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Boing Martin
   m_EditorClassIdentifier: 
   topicValue: 45000
-  romanceResponse: a
-  lieResponse: q
-  firmResponse: e
+  romanceResponse: "Oh you like planes baby, why don\u2019t you fly with me?"
+  lieResponse: Merchant of Death? You made that up, they only sell puppies and planes
+  firmResponse: "People love to travel! You\u2019ll always need Boing Martin planes"

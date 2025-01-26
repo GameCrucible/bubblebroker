@@ -12,6 +12,7 @@ public class Investor : ScriptableObject
     public float romanceMultiplier;
 
     public int romance;
+    public float talkSpeed;
 
     public float GetFirm(float normalPrice){  return normalPrice * firmMultiplier;}
 

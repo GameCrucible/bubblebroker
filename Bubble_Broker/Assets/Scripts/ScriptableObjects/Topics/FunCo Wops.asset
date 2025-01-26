@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: FunCo Wops
   m_EditorClassIdentifier: 
   topicValue: 15000
-  romanceResponse: q
-  lieResponse: w
-  firmResponse: e
+  romanceResponse: Funco Flirt
+  lieResponse: Experts say it makes more money the longer you keep it invested.
+  firmResponse: FunCo Wops have promise! I expect new lines of revenue soon!

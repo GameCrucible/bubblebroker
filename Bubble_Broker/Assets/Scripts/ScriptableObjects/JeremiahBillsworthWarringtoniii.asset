@@ -21,3 +21,4 @@ MonoBehaviour:
   lieMultiplier: 0
   romanceMultiplier: 1
   romance: 0
+  talkSpeed: 0.1
