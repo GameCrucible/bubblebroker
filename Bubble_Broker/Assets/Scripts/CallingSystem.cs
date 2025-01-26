@@ -17,7 +17,11 @@ public class CallingSystem : MonoBehaviour
 
     private int queue;
 
+    public Animator animator;
+
     public CallerPatience callerPatience;
+
+    public AudioSource audio;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -40,6 +44,8 @@ public class CallingSystem : MonoBehaviour
     {
         if (callerPatience.GetQueue() > 0)
         {
+            audio.Play();
+            animator.SetBool("PhoneIn", true);
             dialogueSystem.PickInvestor();
             callerPatience.CallPickedUp();
         }

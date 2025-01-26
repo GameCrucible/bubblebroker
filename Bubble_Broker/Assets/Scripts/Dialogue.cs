@@ -18,6 +18,8 @@ public class Dialogue : MonoBehaviour
     public TMP_Text dialogueText;
     private Topics currentTopic;
 
+    public Animator animator;
+
     private float money = 0;
 
     public Image dialogueImage;
@@ -29,6 +31,10 @@ public class Dialogue : MonoBehaviour
     public TMP_Text firmText;
     public TMP_Text lieText;
     public TMP_Text romanceText;
+    public TMP_Text moneyText;
+
+    public AudioSource audio;
+    public AudioSource audioClose;
 
     private void Start()
     {
@@ -42,10 +48,6 @@ public class Dialogue : MonoBehaviour
         {
             Debug.Log("Call is already being taken");
             return;
-        }
-        if(Random.Range(0, 9) == 0)
-        {
-            LoadScammer();
         }
         else
         {
@@ -78,7 +80,7 @@ public class Dialogue : MonoBehaviour
         if (currentInvestor!=null)
         {
             money += currentInvestor.GetFirm(currentTopic.topicValue);
-            Debug.Log(money);
+            moneyText.text = "$: " + money;
             HangUp();
         }
         
@@ -89,7 +91,7 @@ public class Dialogue : MonoBehaviour
         if (currentInvestor != null)
         {
             money += currentInvestor.GetLie(currentTopic.topicValue);
-            Debug.Log(money);
+            moneyText.text = "$: " + money;
             HangUp();
         }
         
@@ -100,7 +102,7 @@ public class Dialogue : MonoBehaviour
         if(currentInvestor != null)
         {
             money += currentInvestor.GetRomance(currentTopic.topicValue);
-            Debug.Log(money);
+            moneyText.text = "$: " + money;
             HangUp();
         }
         
@@ -113,6 +115,8 @@ public class Dialogue : MonoBehaviour
         dialogueText.text = "";
         ClearPlayerResponses();
         dialogueImage.sprite = null;
+        animator.SetBool("PhoneIn", false);
+        audioClose.Play();
     }
 
     public float GetTopicPrice(string topicName)
@@ -139,10 +143,15 @@ public class Dialogue : MonoBehaviour
         Debug.Log(currentTopic);
         foreach(char letter in typingText)
         {
+            if (!(audio.isPlaying))
+            {
+                audio.Play();
+            }
             dialogueText.text += letter;
             yield return new WaitForSeconds(currentInvestor.GetTalkSpeed());
         }
         SetPlayerResponses();
+        audio.Stop();
         StopCoroutine(typingCoroutine);
     }
 }

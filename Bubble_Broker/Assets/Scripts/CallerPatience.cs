@@ -5,6 +5,7 @@ public class CallerPatience : MonoBehaviour
     private int queue = 0;
     private float timer;
     private bool callPickedUp = false;
+    public AudioSource audio;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,9 +38,14 @@ public class CallerPatience : MonoBehaviour
     {
         if(queue > 0)
         {
+            if (!(audio.isPlaying))
+            {
+                audio.Play();
+            }
             timer -= Time.deltaTime;
             if (callPickedUp)
             {
+                audio.Stop();
                 callPickedUp = false;
                 queue--;
                 ResetTimer();
