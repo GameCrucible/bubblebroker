@@ -6,6 +6,7 @@ public class CallerPatience : MonoBehaviour
     private float timer;
     private bool callPickedUp = false;
     public AudioSource audio;
+    public Animator ringAnimator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,6 +16,7 @@ public class CallerPatience : MonoBehaviour
 
     public void ResetTimer()
     {
+        ringAnimator.SetBool("startRing", false);
         timer = 8f;
     }
 
@@ -43,6 +45,7 @@ public class CallerPatience : MonoBehaviour
                 audio.Play();
             }
             timer -= Time.deltaTime;
+            ringAnimator.SetBool("startRing", true);
             if (callPickedUp)
             {
                 audio.Stop();

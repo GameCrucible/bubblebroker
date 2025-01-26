@@ -3,10 +3,19 @@ using UnityEngine.UI;
 
 public class PhoneButton : MonoBehaviour
 {
-    public Animator animator;
+    public GameObject canvasObject;
+    public GameObject otherObject;
     
     public void TurnOnCanvas()
     {
-        animator.SetBool("PhoneIn", true);
+        canvasObject.SetActive(true);
+    }
+    public void TurnOffCanvas()
+    {
+        canvasObject?.SetActive(false);
+    }
+    public void TurnOnObject()
+    {
+        otherObject.SetActive(true);
     }
 }

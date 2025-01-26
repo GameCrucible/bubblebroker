@@ -147,6 +147,7 @@ public class Dialogue : MonoBehaviour
     public void HangUp()
     {
         StopCoroutine(typingCoroutine);
+        audio.Stop();
         currentInvestor = null;
         dialogueText.text = "";
         ClearPlayerResponses();

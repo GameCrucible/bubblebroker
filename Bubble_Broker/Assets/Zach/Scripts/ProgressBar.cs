@@ -16,8 +16,9 @@ public class ProgressBar : MonoBehaviour
     
     public BubblesManager bubblesManager;
 
-    void Start()
+    void Awake()
     {
+        currentIndex = 0;
         panel.transform.SetAsLastSibling();
         
         progressImage = GetComponent<Image>();
@@ -26,6 +27,8 @@ public class ProgressBar : MonoBehaviour
             Debug.LogError("ProgressBar component requires an Image component!");
             return;
         }
+
+        progressImage.sprite = progressFrames[currentIndex];
 
         if (progressFrames.Length > 0)
         {
@@ -39,6 +42,7 @@ public class ProgressBar : MonoBehaviour
 
     IEnumerator AnimateProgressBar()
     {
+        Debug.Log("Playing");
         // Animate all frames except the last one
         while (currentIndex < progressFrames.Length - 2)
         {
@@ -59,8 +63,9 @@ public class ProgressBar : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
             
             bubblesManager.ShowInitialMessage();
-            
+
             //Hide panel
+            StopCoroutine(AnimateProgressBar());
             panel.SetActive(false);
         }
     }
