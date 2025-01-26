@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
     public int money = 0;
     
     [Tooltip("Starting money for the player.")]
-    public int initialMoney = 10000;
+    public int initialMoney = 100;
     
     public List<Investor> investors = new List<Investor>();
 
@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
     
     private IEnumerator UpdateDay()
     {
-        while (risk < 100)
+        while (risk < 50)
         {
             yield return new WaitForSeconds(dayTick);  //Time range for days
             currentDay++;
@@ -155,6 +155,7 @@ public class GameManager : MonoBehaviour
     
     public void GameOver()
     {
+        money = 0;
         gameOver.SetActive(true);
         badEnd.SetActive(true);
         phone.SetActive(false);
