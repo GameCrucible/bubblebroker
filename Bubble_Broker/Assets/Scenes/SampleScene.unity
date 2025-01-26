@@ -1455,8 +1455,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.599, y: -3}
-  m_SizeDelta: {x: 554.13, y: 274.997}
+  m_AnchoredPosition: {x: -7.471, y: -3}
+  m_SizeDelta: {x: 822.262, y: 274.997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &632240858
 MonoBehaviour:
@@ -1478,9 +1478,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: And don't forget, a good broker will pull out before that bubble pops!
-    Make sure not to miss your opportunity to cash out in the fourth quarter! I hope
-    that bubble never pops.
+  m_text: And don't forget, a good broker will pull out before the investors! Make
+    sure not to miss your opportunity to cash out in the fourth quarter! I hope that
+    bubble never pops.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a513c6f82124d544084201881617f275, type: 2}
   m_sharedMaterial: {fileID: -1357727394437633374, guid: a513c6f82124d544084201881617f275, type: 2}
@@ -1914,8 +1914,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 340.24203, y: 296.78308}
-  m_SizeDelta: {x: 752.9416, y: 254.9451}
+  m_AnchoredPosition: {x: 321.63226, y: 296.78308}
+  m_SizeDelta: {x: 790.161, y: 254.945}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &744056154
 MonoBehaviour:
@@ -4128,8 +4128,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 430.2498, y: -333}
-  m_SizeDelta: {x: 579.326, y: 324.767}
+  m_AnchoredPosition: {x: 250.425, y: -333}
+  m_SizeDelta: {x: 938.976, y: 324.767}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2058029441
 MonoBehaviour:
@@ -4203,8 +4203,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -88.73547, y: -0.375}
-  m_SizeDelta: {x: 575.47, y: 241.2499}
+  m_AnchoredPosition: {x: -79.431, y: -0.375}
+  m_SizeDelta: {x: 556.86, y: 241.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2073183395
 MonoBehaviour:
@@ -4227,9 +4227,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "There are three things you\u2019ve gotta know in this industry: You\u2019ve
-    gotta know how to be Firm, False, and a Flirt!\r\nWait\u2026 sorry, False was
-    the old directive, I think we\u2019ve changed over to Friendly now. Yeah no more
-    false. Not kosher anymore. F.F.F. pretty easy, right?\r\n"
+    gotta know how to be Firm, be False, and be a Flirt!\r\n\nF.F.F. pretty easy,
+    right?\n\nJust make sure to check Invest.org so you don't give a client an option
+    they dislike. If you make them uposet, it could destabalize the market!\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a513c6f82124d544084201881617f275, type: 2}
   m_sharedMaterial: {fileID: -1357727394437633374, guid: a513c6f82124d544084201881617f275, type: 2}

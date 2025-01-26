@@ -10893,7 +10893,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bubbles
+  m_text: 'Babaru
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a513c6f82124d544084201881617f275, type: 2}
   m_sharedMaterial: {fileID: -1357727394437633374, guid: a513c6f82124d544084201881617f275, type: 2}
