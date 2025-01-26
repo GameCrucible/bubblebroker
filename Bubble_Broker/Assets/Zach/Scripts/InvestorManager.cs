@@ -81,7 +81,7 @@ public class InvestorManager : MonoBehaviour
         if (!isValidIndex) return;
 
         Investor investor = GameManager.instance.investors[index];
-        image.sprite = investor.image;
+        image.sprite = investor.computerImage;
         nameText.text = investor.name;
 
         // Build likes string
