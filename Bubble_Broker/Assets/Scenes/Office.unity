@@ -4546,6 +4546,7 @@ MonoBehaviour:
   q3: {fileID: 265275402}
   q4: {fileID: 1210265935}
   fiscalQuarterLength: 60
+  money: 0
   initialMoney: 10000
   investors:
   - {fileID: 11400000, guid: 2015df08afdf6aa44a702611a8b4d5a4, type: 2}
@@ -5094,8 +5095,8 @@ Camera:
   m_GameObject: {fileID: 1993121415}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
