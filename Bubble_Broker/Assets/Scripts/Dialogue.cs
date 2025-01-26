@@ -10,7 +10,10 @@ public class Dialogue : MonoBehaviour
 {
     //Investors
     public Investor[] investors;
-    public Investor currentInvestor;
+    public InvestorScript currentInvestor;
+
+    public GameObject[] investorsOnLine;
+    public GameObject investorPrefab;
 
     public TMP_Text dialogueText;
     private Topics currentTopic;
@@ -46,10 +49,10 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
-            currentInvestor = investors[Random.Range(0,investors.Length)];
-            dialogueImage.sprite = currentInvestor.image;
+            currentInvestor = Instantiate(investorPrefab).GetComponent<InvestorScript>();
+            dialogueImage.sprite = currentInvestor.GetInvestorImage();
             currentTopic = currentInvestor.GetTopic();
-            typingText = currentInvestor.name + " wants to invest in: " + currentTopic.name;
+            typingText = currentInvestor.GetName() + " wants to invest in: " + currentTopic.name;
             StartTyping();
         }
     }
@@ -137,7 +140,7 @@ public class Dialogue : MonoBehaviour
         foreach(char letter in typingText)
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(currentInvestor.talkSpeed);
+            yield return new WaitForSeconds(currentInvestor.GetTalkSpeed());
         }
         SetPlayerResponses();
         StopCoroutine(typingCoroutine);
