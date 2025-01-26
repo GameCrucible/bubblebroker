@@ -44,7 +44,7 @@ public class MarketManager : MonoBehaviour
                 blueScreenPanel.transform.SetAsLastSibling();
                 blueScreenPanel.SetActive(true);
             }
-            else if (Random.Range(0, 10) == 0 && !bsod.activeSelf && !boot.activeSelf)
+            else if (Random.Range(0, Math.Max(10, 50 - (GameManager.instance.currentQuarter * 3))) == 0 && !bsod.activeSelf && !boot.activeSelf)
             {
                 
                 //Place randomly slightly off center, as child of canvas
