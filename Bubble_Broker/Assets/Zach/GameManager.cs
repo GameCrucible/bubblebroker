@@ -45,8 +45,6 @@ public class GameManager : MonoBehaviour
     
     public List<Investor> investors = new List<Investor>();
 
-    public GameObject cashOut;
-
     [Header("Quarter Sticky")] 
     public Image sticky;
     public TextMeshProUGUI stickyText;
@@ -114,7 +112,6 @@ public class GameManager : MonoBehaviour
                 if (currentQuarter == 5)
                 {
                     currentQuarter = 1;
-                    cashOut.SetActive(false);
                     stickyText.text = "Q1";
                     sticky.sprite = q1Texture;
                 }
@@ -132,7 +129,6 @@ public class GameManager : MonoBehaviour
                 {
                     stickyText.text = "Q4";
                     sticky.sprite = q4Texture;
-                    cashOut.SetActive(true);
                 }
             }
             
