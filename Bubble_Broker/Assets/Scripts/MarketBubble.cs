@@ -12,7 +12,7 @@ public class MarketBubble : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float plug = Mathf.Lerp(0.05f, 0.4f, (GameManager.instance.risk / 100f));
+        float plug = Mathf.Lerp(0.05f, 0.35f, (GameManager.instance.risk / 100f));
         this.transform.localScale = new Vector3(plug, plug, plug);
         
         //shift color from white to red as risk increases

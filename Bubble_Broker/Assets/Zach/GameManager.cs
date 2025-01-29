@@ -59,6 +59,8 @@ public class GameManager : MonoBehaviour
     public GameObject q3Report;
     public GameObject q4Report;
     
+    [NonSerialized] public bool endScreen = false;
+    
 
     //Ensure only one instance of the GameManager exists
     private void Awake()
@@ -102,7 +104,7 @@ public class GameManager : MonoBehaviour
     
     private IEnumerator UpdateDay()
     {
-        while (risk < 50)
+        while (risk < 100 && !endScreen)
         {
             yield return new WaitForSeconds(dayTick);  //Time range for days
             currentDay++;
@@ -148,7 +150,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("Risk: " + risk);
         }
 
-        money = (int)(money * Random.Range(0.25f, 0.5f)); //Lose money on pop
+        //money = (int)(money * Random.Range(0.25f, 0.5f)); //Lose money on pop
 
         GameOver();
     }
@@ -164,6 +166,7 @@ public class GameManager : MonoBehaviour
     
     public void GameOver()
     {
+        endScreen = true;
         money = 0;
         gameOver.SetActive(true);
         badEnd.SetActive(true);

@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/DialogueSystem.unity
     guid: ea1474dc266f5d449a31ce46c4c6a3c8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameOver.unity
     guid: d7c54e0f908339444b3d5079a67ea1af
   m_configObjects:

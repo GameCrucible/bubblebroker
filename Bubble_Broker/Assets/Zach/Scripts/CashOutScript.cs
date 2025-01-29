@@ -24,6 +24,7 @@ public class CashOutScript : MonoBehaviour
 
     public void CashOut()
     {
+        GameManager.instance.endScreen = true;
         gameOver.SetActive(true);
         cashOutButton.SetActive(false);
         goodEnd.SetActive(true);

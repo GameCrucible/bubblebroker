@@ -67,7 +67,7 @@ public class Dialogue : MonoBehaviour
             if (timer < 0)
             {
                 doneTalking = false;
-                GameManager.instance.risk += GameManager.instance.currentQuarter; //Increase risk if call is not picked up
+                GameManager.instance.risk += ((GameManager.instance.currentDay / GameManager.instance.fiscalQuarterLength) + 1); //Increase risk if call is not picked up
                 HangUp();
             }
         }
@@ -131,7 +131,7 @@ public class Dialogue : MonoBehaviour
     {
         if (currentInvestor.investor.dislike == Investor.Choices.Lie)
         {
-            GameManager.instance.risk += (int)(Random.Range(5, 10));
+            GameManager.instance.risk += (int)(Random.Range(6, 12));
             //*GameManager.instance.currentQuarter * .6f
             HangUp();
             loseMoney.Play();
@@ -152,7 +152,7 @@ public class Dialogue : MonoBehaviour
     {
         if (currentInvestor.investor.dislike == Investor.Choices.Romance)
         {
-            GameManager.instance.risk += (int)(Random.Range(5, 10));
+            GameManager.instance.risk += (int)(Random.Range(4, 8));
             //*GameManager.instance.currentQuarter * .6f
             HangUp();
             loseMoney.Play();

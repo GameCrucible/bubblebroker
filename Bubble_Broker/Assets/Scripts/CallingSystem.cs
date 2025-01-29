@@ -8,7 +8,7 @@ using UnityEngine.Rendering.Universal;
 
 public class CallingSystem : MonoBehaviour
 {
-    private float timeUntilNextCall = 15f;
+    private float timeUntilNextCall = 20f;
 
     private float timer;
     private float callerTimer;
@@ -31,6 +31,11 @@ public class CallingSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.instance.endScreen)
+        {
+            return;
+        }
+        
         timer -= Time.deltaTime;
         if (timer < 0)
         {
@@ -55,7 +60,7 @@ public class CallingSystem : MonoBehaviour
     {
         timeUntilNextCall -= 0.2f;
         timeUntilNextCall = Mathf.Clamp(timeUntilNextCall, 0.5f, 100f);
-        timer = Random.Range(timeUntilNextCall - 5f, timeUntilNextCall + 5f);
+        timer = Random.Range(timeUntilNextCall - 4f, timeUntilNextCall + 4f);
     }
 
 }
